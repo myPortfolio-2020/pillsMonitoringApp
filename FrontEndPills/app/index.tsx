@@ -6,7 +6,7 @@ const index = () => {
   return (
     <View>
       <Text>index</Text>
-      <Link href='/Register'>Go tot regiister</Link>
+      <Link href='/(auth)/SignIn'>Go tot regiister</Link>
     </View>
   )
 }
