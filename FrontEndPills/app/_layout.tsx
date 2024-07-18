@@ -1,12 +1,9 @@
 import { View, Text } from "react-native";
 import React from "react";
+import StackNav from "@/navigation/StackNav";
 
 const _layout = () => {
-  return (
-    <View>
-      <Text>_layout</Text>
-    </View>
-  );
+  return <StackNav />;
 };
 
 export default _layout;
