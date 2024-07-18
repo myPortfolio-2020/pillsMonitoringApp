@@ -1,11 +1,15 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import StackNav from '@/navigation/StackNav'
+import { View, Text } from "react-native";
+import React from "react";
+import StackNav from "@/navigation/StackNav";
 
 const Index = () => {
   return (
-   <StackNav/>
-  )
-}
+    <>
+     
+        <StackNav />
+   
+    </>
+  );
+};
 
-export default Index
+export default Index;
