@@ -1,13 +1,13 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import {Link, Redirect} from 'expo-router'
+import {Link} from 'expo-router'
 
 
 const SplashScreen = () => {
   return (
     <View>
       <Text>SplashScreen</Text>
-      <Link href='/Register'><Text>Go to Reg</Text></Link>     
+      <Link href='Register'><Text>Go to Reg</Text></Link>     
     </View>
   )
 }
