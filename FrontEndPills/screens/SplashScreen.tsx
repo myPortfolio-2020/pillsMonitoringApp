@@ -12,11 +12,11 @@ const SplashScreen = ({ navigation }: ISplashProp) => {
     navigation.navigate("Register");
   };
   return (
-    <View style={styles.container} className="flex-1 items-center justify-center">   
-      <View>
+    <View style={styles.container}>   
+      <View  className="flex-1 items-center justify-center">
         <Text>Splash Screen</Text>
         <TouchableOpacity>
-          <Text onPress={handlerPress}>Goto Register Screen</Text>
+          <Text onPress={handlerPress}>Goto Register das Screen</Text>
         </TouchableOpacity>
       </View>
     </View>
