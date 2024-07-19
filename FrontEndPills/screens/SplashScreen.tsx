@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import React from "react";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "@/navigation/StackNav";
@@ -12,11 +12,12 @@ const SplashScreen = ({ navigation }: ISplashProp) => {
     navigation.navigate("Register");
   };
   return (
-    <View className="flex justify-center items-center">
+    <View style={styles.container}>
+   
       <View>
-        <Text>SplashScreen!</Text>
-        <TouchableOpacity onPress={handlerPress}>
-          <Text>Go To Gegister First</Text>
+        <Text>Splash Screen</Text>
+        <TouchableOpacity>
+          <Text onPress={handlerPress}>Go TO REGISTER</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -24,3 +25,12 @@ const SplashScreen = ({ navigation }: ISplashProp) => {
 };
 
 export default SplashScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "red",
+    flex: 1,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+});
