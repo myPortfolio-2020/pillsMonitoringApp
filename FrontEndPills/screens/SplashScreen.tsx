@@ -6,8 +6,7 @@ import {Link} from 'expo-router'
 const SplashScreen = () => {
   return (
     <View>
-      <Text>SplashScreen</Text>
-      <Link href='Register'><Text>Go to Reg</Text></Link>     
+      <Text>SplashScreen</Text>      
     </View>
   )
 }
