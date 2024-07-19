@@ -1,12 +1,13 @@
 import React from "react";
-import { Stack } from "expo-router";
+import { NavigationContainer } from "@react-navigation/native";
+import StackNav from "@/navigation/StackNav";
 
 const _layout = () => {
   return (
     <>
-      <Stack>
-        <Stack.Screen name="index" />
-      </Stack>
+      <NavigationContainer independent={true}>
+        <StackNav />
+      </NavigationContainer>
     </>
   );
 };
