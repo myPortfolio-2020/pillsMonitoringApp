@@ -6,13 +6,15 @@ import SignIn from '@/app/(auth)/SignIn';
 import Register from '@/app/(auth)/Register';
 import VerificationCode from '@/app/(auth)/VerificationCode';
 import SplashScreen from '@/app/screens/SplashScreen';
+import Home from '@/app/screens/Home';
 
 export type RootStackParamList = {
   // index:undefined,
   SignIn: undefined,
   Register: undefined,
   VerificationCode: undefined,
-  SplashScreen: undefined
+  SplashScreen: undefined,
+  Home:undefined
 }
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -24,6 +26,7 @@ const StackNav = () => {
        <Stack.Screen name='Register' component={Register} />
        <Stack.Screen name='SignIn' component={SignIn} />
        <Stack.Screen name='VerificationCode' component={VerificationCode} />
+       <Stack.Screen name='Home' component={Home} />
     </Stack.Navigator>
   )
 }

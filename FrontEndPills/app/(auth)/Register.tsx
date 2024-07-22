@@ -3,11 +3,11 @@ import React from "react";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "@/navigation/StackNav";
 
-interface IRegister {
+interface IRegisterProp {
   navigation:StackNavigationProp<RootStackParamList,'Register'>
 }
 
-const Register = ({navigation}:IRegister) => {
+const Register = ({navigation}:IRegisterProp) => {
   const handlerPress = ()=>{
       navigation.navigate('VerificationCode')
   }
