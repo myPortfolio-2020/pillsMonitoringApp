@@ -2,10 +2,10 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import index from '@/app/index';
-import SignIn from '@/(auth)/SignIn';
-import Register from '@/(auth)/Register';
-import VerificationCode from '@/(auth)/VerificationCode';
-import SplashScreen from '@/screens/SplashScreen';
+import SignIn from '@/app/(auth)/SignIn';
+import Register from '@/app/(auth)/Register';
+import VerificationCode from '@/app/(auth)/VerificationCode';
+import SplashScreen from '@/app/screens/SplashScreen';
 
 export type RootStackParamList = {
   // index:undefined,

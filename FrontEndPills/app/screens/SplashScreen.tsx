@@ -12,24 +12,17 @@ const SplashScreen = ({ navigation }: ISplashProp) => {
     navigation.navigate("Register");
   };
   return (
-    <View style={styles.container}>   
+     
       <View  className="flex-1 items-center justify-center">
         <Text>Splash Screen</Text>
         <TouchableOpacity>
-          <Text onPress={handlerPress}>Goto Register das Screen</Text>
+          <Text onPress={handlerPress}>Goto Register Screen</Text>
         </TouchableOpacity>
       </View>
-    </View>
+  
   );
 };
 
 export default SplashScreen;
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "red",
-    flex: 1,
-    justifyContent:'center',
-    alignItems:'center'
-  },
-});
+

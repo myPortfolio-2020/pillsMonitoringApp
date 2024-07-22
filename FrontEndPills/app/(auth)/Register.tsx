@@ -3,7 +3,7 @@ import React from "react";
 
 const Register = () => {
   return (
-    <View className="flex-1 justify-center items-center">
+    <View className="flex-1 items-center justify-center">
       <Text>Register Screen</Text>
     </View>
   );
