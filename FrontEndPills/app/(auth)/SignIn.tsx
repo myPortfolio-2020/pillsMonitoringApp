@@ -9,7 +9,7 @@ interface IHomeProp {
 
 const SignIn = ({navigation}:IHomeProp) => {
   const handlerPress = ()=>{
-    navigation.navigate('Home')
+    navigation.navigate('UserHome')
   }
   return (
     <View className="flex-1 items-center justify-center">

@@ -1,11 +1,22 @@
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
-import DrawerNavigation from '@/navigation/DrawerNavigation'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const Home = () => {
   return (
-   <DrawerNavigation/>
+    <View>
+      <TouchableOpacity>
+        <Text style={styles.createBtn}>Create New Patient</Text>
+      </TouchableOpacity>
+    </View>
   )
 }
 
 export default Home
+
+const styles = StyleSheet.create({
+    createBtn:{
+        backgroundColor:'#ddff33',        
+        padding:9
+    }
+})
