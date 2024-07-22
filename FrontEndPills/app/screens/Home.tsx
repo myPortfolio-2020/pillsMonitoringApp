@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <View>
       <TouchableOpacity>
-        <Text style={styles.createBtn}>Create New Patient</Text>
+        <Text style={styles.createBtn}>Create New Patient btn</Text>
       </TouchableOpacity>
     </View>
   )
