@@ -7,6 +7,8 @@ import Register from '@/app/(auth)/Register';
 import VerificationCode from '@/app/(auth)/VerificationCode';
 import SplashScreen from '@/app/screens/SplashScreen';
 import UserHome from '@/app/screens/UserHome';
+import Home from '@/app/screens/Home';
+import CreateNewPatient from '@/app/screens/patients/CreateNewPatient';
 
 export type RootStackParamList = {
   // index:undefined,
@@ -14,7 +16,9 @@ export type RootStackParamList = {
   Register: undefined,
   VerificationCode: undefined,
   SplashScreen: undefined,
-  UserHome:undefined
+  UserHome:undefined,
+  Home:undefined,
+  CreateNewPatient:undefined
 }
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -26,7 +30,9 @@ const StackNav = () => {
        <Stack.Screen name='Register' component={Register} />
        <Stack.Screen name='SignIn' component={SignIn} />
        <Stack.Screen name='VerificationCode' component={VerificationCode} />
+       <Stack.Screen name='Home' component={Home} />
        <Stack.Screen name='UserHome' component={UserHome} />
+       <Stack.Screen name='CreateNewPatient' component={CreateNewPatient} />
     </Stack.Navigator>
   )
 }
