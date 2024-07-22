@@ -17,6 +17,7 @@ export default Home
 const styles = StyleSheet.create({
     createBtn:{
         backgroundColor:'#ddff33',        
-        padding:9
+        padding:9,
+        margin:9
     }
 })
