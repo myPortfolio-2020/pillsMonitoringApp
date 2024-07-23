@@ -1,13 +1,11 @@
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text } from 'react-native'
 import React from 'react'
-import PatientsStack from '@/navigation/PatientsStack'
+import DrawerNavigation from '@/navigation/DrawerNavigation'
 
 const Home = () => {
-
   return (
-    <PatientsStack/>
+    <DrawerNavigation/>
   )
 }
 
 export default Home
-

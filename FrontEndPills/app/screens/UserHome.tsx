@@ -4,7 +4,9 @@ import DrawerNavigation from '@/navigation/DrawerNavigation'
 
 const UserHome = () => {
   return (
-    <DrawerNavigation/>
+    <View>
+      <Text>UserHome</Text>
+    </View>
   )
 }
 
