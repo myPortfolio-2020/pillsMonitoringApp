@@ -4,7 +4,9 @@ import PatientsStack from '@/navigation/PatientsStack'
 
 const UserScreen = () => {
   return (
-    <PatientsStack/>
+   <View>
+    <Text>USERSCREEN</Text>
+   </View>
   )
 }
 
