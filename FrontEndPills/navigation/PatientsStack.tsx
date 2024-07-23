@@ -1,11 +1,22 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { createStackNavigator } from '@react-navigation/stack';
+import UserScreen from '@/app/screens/UserScreen';
+import CreateNewPatient from '@/app/screens/patients/CreateNewPatient';
+
+export type TPatientStackParams = {
+  UserScreen:undefined,
+  CreateNewPatient:undefined
+}
+
+const Stack = createStackNavigator<TPatientStackParams>();
 
 const PatientsStack = () => {
   return (
-    <View>
-      <Text>PatientsStack</Text>
-    </View>
+    <Stack.Navigator screenOptions={{headerShown:false}}>
+      <Stack.Screen name="UserScreen" component={UserScreen} />
+      <Stack.Screen name="CreateNewPatient" component={CreateNewPatient} />
+    </Stack.Navigator>
   )
 }
 
