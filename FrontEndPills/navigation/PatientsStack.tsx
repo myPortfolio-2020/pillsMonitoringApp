@@ -17,8 +17,8 @@ const PatientsStack = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown:false}}>
       <Stack.Screen name="UserHome" component={UserHome} />
-      <Stack.Screen name="UserScreen" component={UserScreen} />
-      <Stack.Screen name="CreateNewPatient" component={CreateNewPatient} />
+      {/* <Stack.Screen name="UserScreen" component={UserScreen} />
+      <Stack.Screen name="CreateNewPatient" component={CreateNewPatient} /> */}
     </Stack.Navigator>
   )
 }
