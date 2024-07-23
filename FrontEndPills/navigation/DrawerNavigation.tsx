@@ -3,6 +3,7 @@ import React from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import Support from '@/app/screens/Support';
 import About from '@/app/screens/About';
+import UserHome from '@/app/screens/UserHome';
 import PatientsStack from './PatientsStack';
 
 const Drawer = createDrawerNavigator();
