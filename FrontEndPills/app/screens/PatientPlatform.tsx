@@ -1,12 +1,11 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import PatientsStack from '@/navigation/PatientsStack'
-import PatientPlatform from './PatientPlatform'
 
-const UserScreen = () => {
+const PatientPlatform = () => {
   return (
-<PatientPlatform/>
+<PatientsStack/>
   )
 }
 
-export default UserScreen
+export default PatientPlatform
