@@ -6,12 +6,19 @@ import Signup from "../auth/Signup";
 import SignIn from "../auth/SignIn";
 import VerificationCode from "../auth/VerificationCode";
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+    SplashScreen: undefined,
+    Signup: undefined,
+    VerificationCode: undefined,
+    SignIn: undefined,
+}
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const StackNavigation = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Splash" component={SplashScreen} />
+      <Stack.Screen name="SplashScreen" component={SplashScreen} />
       <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="VerificationCode" component={VerificationCode} />
       <Stack.Screen name="SignIn" component={SignIn} />
