@@ -1,19 +1,16 @@
-import { View, Text, Pressable, Button } from 'react-native'
-import React from 'react'
+import { View, Text, TouchableOpacity, TouchableHighlight } from "react-native";
+import React from "react";
 
 const SplashScreen = () => {
-  const handlePress = ()=>{
-    
-  }
+  const handlePress = () => {};
   return (
     <View>
       <Text>SplashScreen</Text>
-      <Pressable onPress={handlePress}>
+      <TouchableOpacity>
         <Text>Start</Text>
-      </Pressable>
-      <Button title='Start' />
+      </TouchableOpacity>
     </View>
-  )
-}
+  );
+};
 
-export default SplashScreen
+export default SplashScreen;
