@@ -1,13 +1,9 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from "react-native";
+import React from "react";
+import SplashScreen from "./screens/SplashScreen";
 
 const _layout = () => {
-  return (
-    <View>
-      <Text>_layout _layout_layout_layout_layout_layout_layout</Text>
-    </View>
-  )
-}
+  return <SplashScreen />;
+};
 
-
-export default _layout
+export default _layout;
