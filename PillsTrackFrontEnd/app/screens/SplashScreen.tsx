@@ -18,7 +18,7 @@ const SplashScreen = ({navigation}:SplashProps) => {
   };
   return (
     <View className="flex-1 justify-center items-center ">
-    <Text>SplashScreen!</Text>
+    <Text>SplashScreen</Text>
     <TouchableOpacity>
       <Text onPress={handlerPress}>Start</Text>
     </TouchableOpacity>
