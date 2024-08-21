@@ -9,7 +9,7 @@ const Drawer = createDrawerNavigator();
 
 const PreHome = () => {
   return (
-    <Drawer.Navigator screenOptions={{headerShown:false}}>
+    <Drawer.Navigator>
         <Drawer.Screen name="TabsNavigation" component={TabsNavigation} />    
         <Drawer.Screen name="About" component={About} />
         <Drawer.Screen name="Support" component={Support} />
