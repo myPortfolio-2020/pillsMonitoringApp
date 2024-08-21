@@ -24,8 +24,7 @@ const StackNavigation = () => {
       <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="VerificationCode" component={VerificationCode} />
       <Stack.Screen name="SignIn" component={SignIn} />
-      <Stack.Screen name="PreHome" component={PreHome}/>
-    
+      <Stack.Screen name="PreHome" component={PreHome}/>    
     </Stack.Navigator>
   );
 };
