@@ -12,7 +12,8 @@ export type RootStackParamList = {
     Signup: undefined,
     VerificationCode: undefined,
     SignIn: undefined,
-    PreHome:undefined
+    PreHome:undefined,
+    tabs:undefined
   }
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -24,7 +25,7 @@ const StackNavigation = () => {
       <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="VerificationCode" component={VerificationCode} />
       <Stack.Screen name="SignIn" component={SignIn} />
-      <Stack.Screen name="PreHome" component={PreHome}/>    
+      <Stack.Screen name="PreHome" component={PreHome}/>     
     </Stack.Navigator>
   );
 };
