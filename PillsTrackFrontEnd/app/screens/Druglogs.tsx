@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import { useState } from "react";
 import React from "react";
 import HomeMain from "./HomeMain";
+import FirstEntry from "./FirstEntry";
 
 
 const Druglogs = () => {
@@ -9,7 +10,7 @@ const Druglogs = () => {
   return (
     <>
     {
-      ifData ? <HomeMain/> :'FirstTime Entry'
+      ifData ? <HomeMain/> :<FirstEntry/>
     }
     </>
   );
