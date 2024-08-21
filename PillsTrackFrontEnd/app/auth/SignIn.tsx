@@ -11,7 +11,6 @@ const SignIn = ({navigation}:SignInProp) => {
 
   const handlerOnPress = ()=>{
     navigation.navigate('PreHome')
-
   }
 
   return (
