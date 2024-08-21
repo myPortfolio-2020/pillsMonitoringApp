@@ -6,10 +6,9 @@ import Support from './Support';
 
 const Drawer = createDrawerNavigator();
 
-
 const PreHome = () => {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator>        
         <Drawer.Screen name="About" component={About} />
         <Drawer.Screen name="Support" component={Support} />
     </Drawer.Navigator>
