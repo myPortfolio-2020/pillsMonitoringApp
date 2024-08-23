@@ -1,0 +1,3 @@
+chatGPT
+
+giving bottom tabs in one of the drawer item in react Native expo project
