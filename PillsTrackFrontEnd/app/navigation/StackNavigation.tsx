@@ -14,7 +14,6 @@ export type RootStackParamList = {
   VerificationCode: undefined;
   SignIn: undefined;
   DrugsLog: undefined;
-  tabs: undefined;
   DrawerNavigation: undefined;
 };
 
