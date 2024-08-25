@@ -1,12 +1,11 @@
 import { View, Text } from "react-native";
-import React from "react";
+import React, { useState } from "react";
+import FirstTimeAfterLogin from "../components/FirstTimeAfterLogin";
+import User from "../components/User";
 
 const PreHome = () => {
-  return (
-    <View>
-      <Text>PreHome</Text>
-    </View>
-  );
+  const [isData, setIsData] = useState(false);
+  return <>{isData ? <FirstTimeAfterLogin /> : <User />}</>;
 };
 
 export default PreHome;
