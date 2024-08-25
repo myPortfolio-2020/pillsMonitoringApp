@@ -13,7 +13,7 @@ export type RootStackParamList = {
   Signup: undefined;
   VerificationCode: undefined;
   SignIn: undefined;
-  PreHome: undefined;
+  DrugsLog: undefined;
   tabs: undefined;
   DrawerNavigation: undefined;
 };
@@ -27,7 +27,7 @@ const StackNavigation = () => {
       <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="VerificationCode" component={VerificationCode} />
       <Stack.Screen name="SignIn" component={SignIn} />
-      <Stack.Screen name="PreHome" component={PreHome} />
+      <Stack.Screen name="DrugsLog" component={PreHome} />
       <Stack.Screen name="DrawerNavigation" component={DrawerNavigation} />
     </Stack.Navigator>
   );

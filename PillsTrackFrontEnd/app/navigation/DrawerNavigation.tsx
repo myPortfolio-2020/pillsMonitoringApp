@@ -9,18 +9,16 @@ const Drawer = createDrawerNavigator();
 
 const DrawerNavigation = () => {
   return (
-    <Drawer.Navigator>
-      <Drawer.Screen
-        name="DrugsLog"
-        component={PreHome}
-        options={{
-          headerRight: () => (
-            <View>
-              <Text>Profile</Text>
-            </View>
-          ),
-        }}
-      />
+    <Drawer.Navigator
+      screenOptions={{
+        headerRight: () => (
+          <View>
+            <Text>Pro</Text>
+          </View>
+        ),
+      }}
+    >
+      <Drawer.Screen name="DrugsLog" component={PreHome} />
       <Drawer.Screen name="About" component={About} />
       <Drawer.Screen name="Support" component={Support} />
     </Drawer.Navigator>
