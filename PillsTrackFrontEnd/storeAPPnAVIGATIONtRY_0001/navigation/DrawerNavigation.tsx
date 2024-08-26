@@ -4,7 +4,8 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import About from "../screens/About";
 import Support from "../screens/Support";
 import PreHome from "../screens/PreHome";
-
+import Svg, { Circle, Rect } from 'react-native-svg';
+import DrugsLogin from "../screens/DrugsLogin";
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigation = () => {
@@ -12,13 +13,15 @@ const DrawerNavigation = () => {
     <Drawer.Navigator
       screenOptions={{
         headerRight: () => (
-          <View>
-            <Text>Pro</Text>
+          <View className="flex-row">
+            <Text className="pr-3">Notification</Text>
+            <Text className="pr-3">Profile</Text>
           </View>
         ),
       }}
     >
-      <Drawer.Screen name="DrugsLog" component={PreHome} />
+       <Drawer.Screen name="DrugsLogin" component={DrugsLogin} />
+      <Drawer.Screen name="PreHome" component={PreHome} />
       <Drawer.Screen name="About" component={About} />
       <Drawer.Screen name="Support" component={Support} />
     </Drawer.Navigator>

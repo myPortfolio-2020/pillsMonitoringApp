@@ -9,16 +9,33 @@
 
 // export default PreHome;
 
-import { View, Text } from "react-native";
+import { View, Text,TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import FirstTimeAfterLogin from "../components/FirstTimeAfterLogin";
-import User from "../components/User";
 import TabsNavigation from "../navigation/TabsNavigation";
-import UserNavigation from "../navigation/UserNavigation";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../navigation/StackNavigation";
 
-const PreHome = () => {
-  const [firstTimeLogin, FirstTimeLogin] = useState(false);
-  return <>{firstTimeLogin ? <FirstTimeAfterLogin /> : <User />}</>;
+interface IPreHomePro {
+  navigation:NativeStackNavigationProp<RootStackParamList,'PreHome'>
+}
+
+const PreHome = ({navigation}:IPreHomePro) => {
+  const [firstTimeLogin, FirstTimeLogin] = useState(true);
+
+  const handlerPress = ()=>{
+    navigation.navigate("CreateNewPatient")
+  }
+
+  return <>{firstTimeLogin ? 
+    
+    <View className="flex-1 justify-center items-center ">
+      <Text>A pill tracking system has not yet been set up</Text>
+      <Text>Click the button below</Text>
+      <TouchableOpacity onPress={handlerPress} >
+        <Text>Create a New Patient</Text>
+      </TouchableOpacity>      
+    </View> : <TabsNavigation />}</>;
 };
 
 export default PreHome;
