@@ -17,7 +17,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../navigation/StackNavigation";
 
 interface IPreHomePro {
-  navigation:NativeStackNavigationProp<RootStackParamList,'DrugsLog'>
+  navigation:NativeStackNavigationProp<RootStackParamList,'PreHome'>
 }
 
 const PreHome = ({navigation}:IPreHomePro) => {
