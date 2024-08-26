@@ -96,7 +96,7 @@ const CustomTabBar = ({ state, descriptors, navigation }: any) => {
 
 const _layout: React.FC = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer independent={true}>
       <Tab.Navigator tabBar={(props) => <CustomTabBar {...props} />}>
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Search" component={SearchScreen} />
