@@ -17,7 +17,7 @@ import TabsNavigation from "../navigation/TabsNavigation";
 
 
 const PreHome = () => {
-  const [firstTimeLogin, FirstTimeLogin] = useState(false);
+  const [firstTimeLogin, FirstTimeLogin] = useState(true);
   return <>{firstTimeLogin ? <FirstTimeAfterLogin /> : <TabsNavigation />}</>;
 };
 
