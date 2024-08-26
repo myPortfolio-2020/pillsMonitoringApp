@@ -1,11 +1,10 @@
 import { View, Text } from "react-native";
 import React from "react";
+import TabsNavigation from "../navigation/TabsNavigation";
 
 const User = () => {
   return (
-    <View>
-      <Text>User</Text>
-    </View>
+  <TabsNavigation/>
   );
 };
 
