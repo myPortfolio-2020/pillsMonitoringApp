@@ -6,26 +6,28 @@ import Signup from "../auth/Signup";
 import SignIn from "../auth/SignIn";
 import VerificationCode from "../auth/VerificationCode";
 import PreHome from "../screens/PreHome";
+import DrawerNavigation from "./DrawerNavigation";
 
 export type RootStackParamList = {
-    SplashScreen: undefined,
-    Signup: undefined,
-    VerificationCode: undefined,
-    SignIn: undefined,
-    PreHome:undefined,
-    tabs:undefined
-  }
+  SplashScreen: undefined;
+  Signup: undefined;
+  VerificationCode: undefined;
+  SignIn: undefined;
+  DrugsLog: undefined;
+  DrawerNavigation: undefined;
+};
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const StackNavigation = () => {
   return (
-    <Stack.Navigator screenOptions={{headerShown:false}}>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="SplashScreen" component={SplashScreen} />
       <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="VerificationCode" component={VerificationCode} />
       <Stack.Screen name="SignIn" component={SignIn} />
-      <Stack.Screen name="PreHome" component={PreHome}/>     
+      <Stack.Screen name="DrugsLog" component={PreHome} />
+      <Stack.Screen name="DrawerNavigation" component={DrawerNavigation} />
     </Stack.Navigator>
   );
 };

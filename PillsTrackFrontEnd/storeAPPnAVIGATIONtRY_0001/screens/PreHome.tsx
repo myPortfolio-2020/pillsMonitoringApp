@@ -1,20 +1,24 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import About from './About';
-import Support from './Support';
-import TabsNavigation from '../navigation/TabsNavigation';
+// import { View, Text } from "react-native";
+// import React from "react";
+// import UserNavigation from "../navigation/UserNavigation";
+// import User from "../components/User";
 
-const Drawer = createDrawerNavigator();
+// const PreHome = () => {
+//   return <User />;
+// };
+
+// export default PreHome;
+
+import { View, Text } from "react-native";
+import React, { useState } from "react";
+import FirstTimeAfterLogin from "../components/FirstTimeAfterLogin";
+import User from "../components/User";
+import TabsNavigation from "../navigation/TabsNavigation";
+import UserNavigation from "../navigation/UserNavigation";
 
 const PreHome = () => {
-  return (
-    <Drawer.Navigator>
-        <Drawer.Screen name="TabsNavigation" component={TabsNavigation} />    
-        <Drawer.Screen name="About" component={About} />
-        <Drawer.Screen name="Support" component={Support} />
-    </Drawer.Navigator>
-  )
-}
+  const [firstTimeLogin, FirstTimeLogin] = useState(false);
+  return <>{firstTimeLogin ? <FirstTimeAfterLogin /> : <User />}</>;
+};
 
-export default PreHome
+export default PreHome;
