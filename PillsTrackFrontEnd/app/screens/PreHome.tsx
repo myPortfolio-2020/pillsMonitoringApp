@@ -13,11 +13,10 @@ import { View, Text } from "react-native";
 import React, { useState } from "react";
 import FirstTimeAfterLogin from "../components/FirstTimeAfterLogin";
 import User from "../components/User";
-import TabsNavigation from "../navigation/TabsNavigation";
-import UserNavigation from "../navigation/UserNavigation";
+
 
 const PreHome = () => {
-  const [firstTimeLogin, FirstTimeLogin] = useState(false);
+  const [firstTimeLogin, FirstTimeLogin] = useState(true);
   return <>{firstTimeLogin ? <FirstTimeAfterLogin /> : <User />}</>;
 };
 
