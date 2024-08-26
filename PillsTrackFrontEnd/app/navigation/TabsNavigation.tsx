@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../(tabs)/Home';
 import MyTrack from '../(tabs)/MyTrack';
 import Patients from '../(tabs)/Patients';
+import CreateNewPatient from '../components/CreateNewPatient';
 
 
 const Tab = createBottomTabNavigator();
@@ -14,6 +15,10 @@ const TabsNavigation = () => {
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="MyTrack" component={MyTrack} />
         <Tab.Screen name="Patients" component={Patients} />
+        <Tab.Screen name="CreateNewPatient" component={CreateNewPatient} options={{
+          tabBarLabel:()=>null,
+          tabBarIconStyle:{position:'absolute', bottom:10}
+        }} />
     </Tab.Navigator>
   )
 }

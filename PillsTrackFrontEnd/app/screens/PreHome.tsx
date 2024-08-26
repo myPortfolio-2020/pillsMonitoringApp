@@ -22,7 +22,7 @@ interface IPreHomePro {
 }
 
 const PreHome = ({navigation}:IPreHomePro) => {
-  const [firstTimeLogin, FirstTimeLogin] = useState(true);
+  const [firstTimeLogin, FirstTimeLogin] = useState(false);
 
   const handlerPress = ()=>{
     navigation.navigate("CreateNewPatient")
