@@ -55,7 +55,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
                     : 'person-outline'
                 }
                 size={24}
-                color={isFocused ? 'tomato' : 'gray'}
+                color={isFocused ? '#1BB9E6' : '#191516'}
               />
             </TouchableOpacity>
           );
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
       width: 40,
       height: 40,
       borderRadius: 30,
-      backgroundColor: 'tomato',
+      backgroundColor: '#1BB9E6',
       justifyContent: 'center',
       alignItems: 'center',
       position: 'absolute',
