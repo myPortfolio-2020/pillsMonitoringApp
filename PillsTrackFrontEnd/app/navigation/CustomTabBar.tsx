@@ -50,8 +50,8 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
                 name={
                   route.name === 'Home'
                     ? 'home-outline'
-                    : route.name === 'Search'
-                    ? 'search-outline'
+                    : route.name === 'Patients'
+                    ? 'bar-chart-outline'
                     : 'person-outline'
                 }
                 size={24}

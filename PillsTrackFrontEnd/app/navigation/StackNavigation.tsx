@@ -32,8 +32,6 @@ const StackNavigation = () => {
       <Stack.Screen name="SignIn" component={SignIn} />
       <Stack.Screen name="PreHome" component={PreHome} />
       <Stack.Screen name="DrawerNavigation" component={DrawerNavigation} />
-      {/* <Stack.Screen name="FirstTimeAfterLogin" component={FirstTimeAfterLogin} />
-      <Stack.Screen name="CreateNewPatient" component={CreateNewPatient} /> */}
     </Stack.Navigator>
   );
 };
