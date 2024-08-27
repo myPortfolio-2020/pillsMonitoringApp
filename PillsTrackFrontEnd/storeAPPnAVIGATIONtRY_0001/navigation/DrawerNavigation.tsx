@@ -20,8 +20,7 @@ const DrawerNavigation = () => {
         ),
       }}
     >
-       <Drawer.Screen name="DrugsLogin" component={DrugsLogin} />
-      <Drawer.Screen name="PreHome" component={PreHome} />
+      <Drawer.Screen name="DrugsLogin" component={DrugsLogin} />
       <Drawer.Screen name="About" component={About} />
       <Drawer.Screen name="Support" component={Support} />
     </Drawer.Navigator>

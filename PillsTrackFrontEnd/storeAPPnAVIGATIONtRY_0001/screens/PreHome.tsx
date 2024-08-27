@@ -15,13 +15,14 @@ import FirstTimeAfterLogin from "../components/FirstTimeAfterLogin";
 import TabsNavigation from "../navigation/TabsNavigation";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../navigation/StackNavigation";
+import { RootInnerStackParamList } from "./DrugsLogin";
 
 interface IPreHomePro {
-  navigation:NativeStackNavigationProp<RootStackParamList,'PreHome'>
+  navigation:NativeStackNavigationProp<RootInnerStackParamList,'PreHome'>
 }
 
 const PreHome = ({navigation}:IPreHomePro) => {
-  const [firstTimeLogin, FirstTimeLogin] = useState(true);
+  const [firstTimeLogin, FirstTimeLogin] = useState(false);
 
   const handlerPress = ()=>{
     navigation.navigate("CreateNewPatient")
