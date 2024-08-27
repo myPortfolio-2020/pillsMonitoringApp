@@ -51,8 +51,8 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
                   route.name === 'Home'
                     ? 'home-outline'
                     : route.name === 'Patients'
-                    ? 'bar-chart-outline'
-                    : 'person-outline'
+                    ? 'person-outline'
+                    : 'bar-chart-outline'
                 }
                 size={24}
                 color={isFocused ? '#1BB9E6' : '#191516'}
