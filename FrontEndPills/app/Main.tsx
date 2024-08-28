@@ -4,7 +4,7 @@ import AnotherItem from "./component/AnotherItem";
 import { useGetNotesQuery } from "./redux/slices/api";
 
 const Main = () => {
-  const { data } = useGetNotesQuery();
+  const {data} = useGetNotesQuery();
   return (
     <View className="flex-1">
       <View>
@@ -13,7 +13,7 @@ const Main = () => {
         <Button title="Add Item" />
       </View>
       {data?.map((item) => {
-        return <AnotherItem text={item.data} />;
+        return <AnotherItem text={item.text} />;
       })}
       
     </View>
