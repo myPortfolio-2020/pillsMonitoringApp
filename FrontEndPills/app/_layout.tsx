@@ -3,8 +3,10 @@ import React from "react";
 import AnotherItem from "./component/AnotherItem";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import { useGetNotesQuery } from "./redux/slices/api";
 
 const _layout = () => {
+  // const { data } = useGetNotesQuery();
   return (
     <Provider store={store}>
       <View className="flex-1">
@@ -12,9 +14,9 @@ const _layout = () => {
           <Text style={styles.gap20}>Add a new note</Text>
           <TextInput style={styles.inputStyle} />
           <Button title="Add Item" />
-        </View>
-        <AnotherItem />
+        </View>      
       </View>
+      <AnotherItem/>
     </Provider>
   );
 };
