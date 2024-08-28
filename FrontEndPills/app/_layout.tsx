@@ -1,22 +1,21 @@
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import React from "react";
 import AnotherItem from "./component/AnotherItem";
-import { Provider } from 'react-redux';
-import {store} from './redux/store'
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 const _layout = () => {
   return (
     <Provider store={store}>
-    <View className="flex-1">
-      <View>
-        <Text style={styles.gap20}>Add a new note</Text>
-        <TextInput style={styles.inputStyle} />
-        <Button title="Add Item" />
+      <View className="flex-1">
+        <View>
+          <Text style={styles.gap20}>Add a new note</Text>
+          <TextInput style={styles.inputStyle} />
+          <Button title="Add Item" />
+        </View>
+        <AnotherItem />
       </View>
-      <AnotherItem/>
-    </View>
     </Provider>
-
   );
 };
 
