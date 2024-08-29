@@ -1,10 +1,10 @@
 import { View, Text, Pressable,StyleSheet } from "react-native";
 import React from "react";
 
-const AnotherItem = () => {
+const AnotherItem = ({text}:{text:string}) => {
   return (
     <View>
-      <Text style={styles.txtBox}>Recently Notes Items</Text>
+      <Text style={styles.txtBox}>{text}</Text>
       <View className="flex-row">
         <Pressable style={styles.buttonSty}>
           <Text>Edit</Text>
@@ -21,7 +21,7 @@ export default AnotherItem;
 
 const styles = StyleSheet.create({
   buttonSty:{
-    backgroundColor:'#345dfc',
+    backgroundColor:'#a1cff3',
     paddingLeft:24,
     paddingRight:24,
     paddingBottom:6,
@@ -32,9 +32,10 @@ const styles = StyleSheet.create({
   txtBox:{
     borderWidth:1,
     margin:7,
-    borderColor:'#124512',
+    borderColor:'#c2d8c2',
     padding:14,
-    minHeight:100,
-    borderRadius:4 
+    minHeight:40,
+    borderRadius:4,
+    fontSize:24
   }
 })
