@@ -13,7 +13,7 @@ const Main = () => {
         <Button title="Add Item" />
       </View>
       {data?.map((item) => {
-        return <AnotherItem text={item.text} />;
+        return <AnotherItem text={item.text} key={item.id} />;
       })}
       
     </View>
