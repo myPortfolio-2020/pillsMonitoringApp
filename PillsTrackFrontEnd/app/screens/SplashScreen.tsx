@@ -1,4 +1,10 @@
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  SafeAreaView,
+} from "react-native";
 import React from "react";
 import { RootStackParamList } from "../navigation/StackNavigation";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -12,12 +18,14 @@ const SplashScreen = ({ navigation }: SplashProps) => {
     navigation.navigate("Signup");
   };
   return (
-    <View className="flex-1 justify-center items-center ">
-      <Text className="font-fExtraBoldItalic">SplashScreen</Text>
-      <TouchableOpacity>
-        <Text onPress={handlerPress}>Start</Text>
-      </TouchableOpacity>
-    </View>
+    <SafeAreaView>
+      <View className="flex-1 justify-center items-center ">
+        <Text className="font-fExtraBoldItalic">SplashScreen</Text>
+        <TouchableOpacity>
+          <Text onPress={handlerPress}>Start</Text>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   );
 };
 
