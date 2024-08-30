@@ -12,6 +12,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { ScrollView } from "react-native-gesture-handler";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import images from "./../../constants/images";
+import SplashSlider from "../components/SplashSlider";
 
 interface SplashProps {
   navigation: NativeStackNavigationProp<RootStackParamList, "SplashScreen">;
@@ -31,6 +32,7 @@ const SplashScreen = ({ navigation }: SplashProps) => {
             <Text className="font-fExtraBoldItalic">Don’t let them forget</Text>
             <Image source={images.splashImg} resizeMode="contain" />
             <Text>How it is helpful?</Text>
+            <SplashSlider/>
             <TouchableOpacity>
               <Text onPress={handlerPress}>Start</Text>
             </TouchableOpacity>
