@@ -4,10 +4,14 @@ import {
   TouchableOpacity,
   StyleSheet,
   SafeAreaView,
+  Image
 } from "react-native";
 import React from "react";
 import { RootStackParamList } from "../navigation/StackNavigation";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { ScrollView } from "react-native-gesture-handler";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import images from './../../constants/images'
 
 interface SplashProps {
   navigation: NativeStackNavigationProp<RootStackParamList, "SplashScreen">;
@@ -18,17 +22,19 @@ const SplashScreen = ({ navigation }: SplashProps) => {
     navigation.navigate("Signup");
   };
   return (
-    // <SafeAreaView className="h-full">
-    //   <ScrollView contentContainerStyle={{height:'100%'}}>
-
-    //   </ScrollView>
-    // </SafeAreaView>
-    <View className="flex-1 justify-center items-center ">
-    <Text className="font-fExtraBoldItalic">SplashScreen</Text>
-    <TouchableOpacity>
-      <Text onPress={handlerPress}>Start</Text>
-    </TouchableOpacity>
-  </View>
+    <GestureHandlerRootView>
+      <SafeAreaView className="h-full">
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+          <View className="flex-1 justify-center items-center ">
+            <Text className="font-fExtraBoldItalic">SplashScreen</Text>
+            <Image source={images.appLogo}/>
+            <TouchableOpacity>
+              <Text onPress={handlerPress}>Start</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </GestureHandlerRootView>
   );
 };
 

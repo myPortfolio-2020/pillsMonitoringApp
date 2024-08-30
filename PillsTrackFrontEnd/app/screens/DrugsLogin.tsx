@@ -13,7 +13,7 @@ export type RootInnerStackParamList = {
   PreHome: undefined;
 };
 
-const DrugsLogin = () => {
+const DrugsLog = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="PreHome" component={PreHome} />
@@ -23,4 +23,4 @@ const DrugsLogin = () => {
   );
 };
 
-export default DrugsLogin;
+export default DrugsLog;

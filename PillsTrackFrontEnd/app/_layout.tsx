@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet} from "react-native";
 import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import StackNavigation from "./navigation/StackNavigation";
