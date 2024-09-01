@@ -1,8 +1,8 @@
 // src/App.tsx
-import React from 'react';
-import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
-import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
+import React from "react";
+import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
+import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
+import { Ionicons } from "@expo/vector-icons";
 
 const CustomTabBar: React.FC<BottomTabBarProps> = ({
   state,
@@ -18,7 +18,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
 
           const onPress = () => {
             const event = navigation.emit({
-              type: 'tabPress',
+              type: "tabPress",
               target: route.key,
               canPreventDefault: true,
             });
@@ -30,7 +30,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
 
           const onLongPress = () => {
             navigation.emit({
-              type: 'tabLongPress',
+              type: "tabLongPress",
               target: route.key,
             });
           };
@@ -48,14 +48,14 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
             >
               <Ionicons
                 name={
-                  route.name === 'Home'
-                    ? 'home-outline'
-                    : route.name === 'Patients'
-                    ? 'person-outline'
-                    : 'bar-chart-outline'
+                  route.name === "Home"
+                    ? "home-outline"
+                    : route.name === "Patients"
+                    ? "person-outline"
+                    : "bar-chart-outline"
                 }
                 size={24}
-                color={isFocused ? '#1BB9E6' : '#191516'}
+                color={isFocused ? "#1BB9E6" : "#191516"}
               />
             </TouchableOpacity>
           );
@@ -63,7 +63,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
       </View>
       <TouchableOpacity
         style={styles.floatingButton}
-        onPress={() => navigation.navigate('CreateNewPatient')}
+        onPress={() => navigation.navigate("CreateNewPatient")}
       >
         <Ionicons name="add" size={30} color="white" />
       </TouchableOpacity>
@@ -73,43 +73,41 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
 
 export default CustomTabBar;
 
-
 const styles = StyleSheet.create({
-    screen: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    tabBarContainer: {
-      flexDirection: 'row',
-      height: 60,
-      borderTopWidth: 1,
-      borderTopColor: '#ccc',
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-    },
-    leftTabsContainer: {
-      flexDirection: 'row',
-      flex: 1,
-      justifyContent: 'space-around',
-    },
-    tabButton: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      flex: 1,
-    },
-    floatingButton: {
-      width: 40,
-      height: 40,
-      borderRadius: 30,
-      backgroundColor: '#1BB9E6',
-      justifyContent: 'center',
-      alignItems: 'center',
-      position: 'absolute',
-      right: 20,
-      bottom: 80,
-      elevation: 5,
-    },
-  });
-  
+  screen: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  tabBarContainer: {
+    flexDirection: "row",
+    height: 0,
+    borderTopWidth: 1,
+    borderTopColor: "#ccc",
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  leftTabsContainer: {
+    flexDirection: "row",
+    flex: 1,
+    justifyContent: "space-around",
+  },
+  tabButton: {
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1,
+  },
+  floatingButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 30,
+    backgroundColor: "#1BB9E6",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "absolute",
+    right: 30,
+    bottom: 80,
+    elevation: 3,
+  },
+});
