@@ -7,8 +7,6 @@ import SignIn from "../auth/SignIn";
 import VerificationCode from "../auth/VerificationCode";
 import PreHome from "../screens/PreHome";
 import DrawerNavigation from "./DrawerNavigation";
-import FirstTimeAfterLogin from "../components/FirstTimeAfterLogin";
-import CreateNewPatient from "../components/CreateNewPatient";
 
 export type RootStackParamList = {
   SplashScreen: undefined;
