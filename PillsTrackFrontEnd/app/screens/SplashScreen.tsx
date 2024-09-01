@@ -25,19 +25,21 @@ const SplashScreen = ({ navigation }: SplashProps) => {
   return (
     <GestureHandlerRootView>
       <SafeAreaView className="h-full">
-        <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-          <View className="flex-1 justify-center items-center ">
+        {/* <ScrollView contentContainerStyle={{ flexGrow: 1 }}> */}
+        <View className="flex-1 justify-center">
+          <View className="justify-center items-center">
             <Image source={images.appLogo} />
             <Text className="font-fExtraBoldItalic">Drug log</Text>
             <Text className="font-fExtraBoldItalic">Don’t let them forget</Text>
             <Image source={images.splashImg} resizeMode="contain" />
             <Text>How it is helpful?</Text>
-            <SplashSlider/>
+            <SplashSlider />
             <TouchableOpacity>
               <Text onPress={handlerPress}>Start</Text>
             </TouchableOpacity>
           </View>
-        </ScrollView>
+        </View>
+        {/* </ScrollView> */}
       </SafeAreaView>
     </GestureHandlerRootView>
   );
