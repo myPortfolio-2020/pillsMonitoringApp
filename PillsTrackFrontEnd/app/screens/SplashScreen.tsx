@@ -9,7 +9,6 @@ import {
 import React from "react";
 import { RootStackParamList } from "../navigation/StackNavigation";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { ScrollView } from "react-native-gesture-handler";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import images from "./../../constants/images";
 import SplashSlider from "../components/SplashSlider";

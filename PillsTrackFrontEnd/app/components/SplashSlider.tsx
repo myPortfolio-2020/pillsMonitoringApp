@@ -1,21 +1,33 @@
-import { View, Text, FlatList, useWindowDimensions } from "react-native";
-import React from "react";
+import {
+  View,
+  Text,
+  FlatList,
+  useWindowDimensions,
+  Animated,
+} from "react-native";
+import React, { useRef } from "react";
 
 interface IText {
   slideText: string;
+  id: string;
 }
 
 const SplashSlider = () => {
   const { width } = useWindowDimensions();
+  const scrollX = useRef(new Animated.Value(0)).current;
+
   const slideItem: IText[] = [
     {
       slideText: "tis is the first text",
+      id: "1",
     },
     {
       slideText: "tis is the second text",
+      id: "2",
     },
     {
       slideText: "tis is the Third text",
+      id: "3",
     },
   ];
   return (
@@ -23,12 +35,14 @@ const SplashSlider = () => {
       data={slideItem}
       renderItem={({ item }) => (
         <View style={{ width }}>
-          <Text>{item.slideText}</Text>
+          <Text style={{ fontSize: 24 }}>{item.slideText}</Text>
         </View>
       )}
       horizontal
       pagingEnabled
       bounces={false}
+      showsHorizontalScrollIndicator
+      keyExtractor={(item) => item.id}
     />
   );
 };
