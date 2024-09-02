@@ -5,7 +5,7 @@ export const api = createApi({
     baseUrl: "http://localhost:3001/0",
   }),
   endpoints: (builder) => ({
-    getPatients: builder.query({
+    getPatients: builder.query<>({
       query: () => ({
         url: "/0",
         method: "GET",

@@ -1,7 +1,9 @@
 import { View, Text } from "react-native";
 import React from "react";
+import { useGetPatientsQuery } from "../redux/slices/api";
 
 const Home = () => {
+  const { data } = useGetPatientsQuery();
   return (
     <View>
       <Text>Today’s medicine</Text>
