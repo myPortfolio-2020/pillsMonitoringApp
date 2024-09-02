@@ -39,10 +39,8 @@ const SplashSlider = () => {
         </View>
       )}
       horizontal
-      pagingEnabled
       bounces={false}
-      showsHorizontalScrollIndicator
-      keyExtractor={(item) => item.id}
+      showsHorizontalScrollIndicator={false}
     />
   );
 };
