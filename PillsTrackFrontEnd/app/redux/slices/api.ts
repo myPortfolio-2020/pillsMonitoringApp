@@ -7,7 +7,7 @@ export const api = createApi({
   endpoints: (builder) => ({
     getPatients: builder.query<IPatient[], void>({
       query: () => ({
-        url: "/0",
+        url: "/users",
         method: "GET",
       }),
     }),

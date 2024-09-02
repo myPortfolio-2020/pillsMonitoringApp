@@ -4,6 +4,7 @@ import { useGetPatientsQuery } from "../redux/slices/api";
 
 const Home = () => {
   const { data } = useGetPatientsQuery();
+  // const patients = Array.isArray(data) ? data : [];
   console.log("what comes here", data);
   return (
     <View>
@@ -15,7 +16,10 @@ const Home = () => {
         <Text>Time Remaining: </Text>
         <Text>Status: </Text>
       </View> */}
-      <FlatList
+      <View>
+        <Text>JH</Text>
+      </View>
+      {/* <FlatList
         data={data}
         renderItem={({ item }) => (
           <View>
@@ -24,7 +28,17 @@ const Home = () => {
             <Text>userId: {item.userId}</Text>
           </View>
         )}
-      />
+        keyExtractor={(item) => item.userId}
+      /> */}
+      {data?.map((item) => {
+        return (
+          <View key={item.userId}>
+            <Text>Patient Name: {item.userName}</Text>
+            <Text>userCategory: {item.userCategory}</Text>
+            <Text>userId: {item.userId}</Text>
+          </View>
+        );
+      })}
     </View>
   );
 };

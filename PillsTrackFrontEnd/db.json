@@ -1,17 +1,19 @@
-[
-  {
-    "userCategory": "user",
-    " userId": "1",
-    "userName": "rabab"
-  },
-  {
-    "userCategory": "admin",
-    " userId": "2",
-    "userName": "Furqan"
-  },
-  {
-    "userCategory": "user",
-    " userId": "13",
-    "userName": "rRehanabab"
-  }
-]
+{
+  "users": [
+    {
+      "userCategory": "user",
+      "userId": "1",
+      "userName": "rabab"
+    },
+    {
+      "userCategory": "admin",
+      "userId": "2",
+      "userName": "Furqan"
+    },
+    {
+      "userCategory": "user",
+      "userId": "3",
+      "userName": "rRehanabab"
+    }
+  ]
+}
