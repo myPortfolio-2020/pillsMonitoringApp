@@ -8,6 +8,7 @@ const Home = () => {
     <View>
       <Text>Today’s medicine</Text>
       <Text>Patient upcoming Pill Reminder</Text>
+
       <View>
         <Text>Patient Name: </Text>
         <Text>Drug Name: </Text>
