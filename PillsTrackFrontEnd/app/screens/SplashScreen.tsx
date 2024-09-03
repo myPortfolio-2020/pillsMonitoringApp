@@ -12,6 +12,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import images from "./../../constants/images";
 import SplashSlider from "../components/SplashSlider";
+import globalStyles from './../../globalStyles'
 
 interface SplashProps {
   navigation: NativeStackNavigationProp<RootStackParamList, "SplashScreen">;
