@@ -3,8 +3,7 @@ import {
   Text,
   StyleSheet,
   Pressable,
-  Image,
-  TextInput,
+  Image  
 } from "react-native";
 import React, { useState } from "react";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -19,17 +18,23 @@ interface SignupProp {
 
 interface IFields {
   username: string;
+  email: string;
   password: string;
+  MobileNumber:string,
+  confirmPassword: string;
   usernameError: string;
   passwordError: string;
 }
 
 const Signup = ({ navigation }: SignupProp) => {
   const [form, setForm] = useState<IFields>({
-    username: "",
-    password: "",
-    usernameError: "",
-    passwordError: "",
+    username: '',
+    email: '',
+    password: '',
+    MobileNumber:'',
+    confirmPassword: '',
+    usernameError: '',
+    passwordError: '',
   });
   const handlerPress = () => {
     navigation.navigate("VerificationCode");
@@ -57,14 +62,14 @@ const Signup = ({ navigation }: SignupProp) => {
         />
         <FormInput
           label="Email"
-          value={form.password}
-          onChangeText={(e) => setForm({ ...form, password: e })}
+          value={form.email}
+          onChangeText={(e) => setForm({ ...form,  email: e })}
           placeholder="Enter your email"
         />
         <FormInput
           label="Mobile number"
-          value={form.password}
-          onChangeText={(e) => setForm({ ...form, password: e })}
+          value={form.MobileNumber}
+          onChangeText={(e) => setForm({ ...form, MobileNumber: e })}
           placeholder="Enter your mobile number"
         />
         <FormInput
@@ -75,8 +80,8 @@ const Signup = ({ navigation }: SignupProp) => {
         />
         <FormInput
           label="Confirm password"
-          value={form.password}
-          onChangeText={(e) => setForm({ ...form, password: e })}
+          value={form.confirmPassword}
+          onChangeText={(e) => setForm({ ...form, confirmPassword: e })}
           placeholder="Confirm password"
         />
         <Pressable onPress={handlerPress}>
