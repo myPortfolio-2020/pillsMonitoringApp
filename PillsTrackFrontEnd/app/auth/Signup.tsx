@@ -3,7 +3,7 @@ import {
   Text,
   StyleSheet,
   Pressable,
-  Image  
+  Image
 } from "react-native";
 import React, { useState } from "react";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -40,6 +40,7 @@ const Signup = ({ navigation }: SignupProp) => {
     navigation.navigate("VerificationCode");
   };
   return (
+
     <View className="flex-1 justify-center" style={globalStyles.screenPad}>
       <View className="justify-center">
         <View className="items-end">
@@ -89,6 +90,7 @@ const Signup = ({ navigation }: SignupProp) => {
         </Pressable>
       </View>
     </View>
+ 
   );
 };
 
