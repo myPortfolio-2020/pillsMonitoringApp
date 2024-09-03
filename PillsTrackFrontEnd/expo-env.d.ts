@@ -2,8 +2,8 @@
 
 // NOTE: This file should not be edited and should be in your git ignore
 
-interface IPatient {
-  userCategory: string;
-  userId: string;
-  userName: string;
+interface IPatient{
+    userId:string,
+    userCategory:string,
+    userName:string
 }
