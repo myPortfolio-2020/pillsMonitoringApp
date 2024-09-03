@@ -12,14 +12,16 @@ const Signup = ({ navigation }: SignupProp) => {
     navigation.navigate("VerificationCode");
   };
   return (
-    <View className="flex-1">
-      <View className="justify-end">
-        <Text>Signup</Text>
+    <View className="flex-1 justify-center"> 
+    <View className="justify-center">
+      <View className="items-end">
+        <Text>Already a Member? Sign In</Text>
       </View>
 
       <TouchableOpacity onPress={handlerPress}>
         <Text>Verification Code</Text>
       </TouchableOpacity>
+    </View>
     </View>
   );
 };
