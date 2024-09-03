@@ -14,13 +14,16 @@ import React, { useState } from "react";
 import TabsNavigation from "../navigation/TabsNavigation";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootInnerStackParamList } from "./DrugsLogin";
+import { useGetPatientsQuery } from "../redux/slices/api";
 
 interface IPreHomePro {
   navigation: NativeStackNavigationProp<RootInnerStackParamList, "PreHome">;
 }
 
 const PreHome = ({ navigation }: IPreHomePro) => {
-  const [firstTimeLogin, FirstTimeLogin] = useState(false);
+
+  const { data } = useGetPatientsQuery();
+  console.log(data?.length)
 
   const handlerPress = () => {
     navigation.navigate("CreateNewPatient");
@@ -28,17 +31,16 @@ const PreHome = ({ navigation }: IPreHomePro) => {
 
   return (
     <>
-      {firstTimeLogin ? (
-        <View className="flex-1 justify-center items-center ">
-          <Text>A pill tracking system has not yet been set up</Text>
-          <Text>Click the button below</Text>
-          <TouchableOpacity onPress={handlerPress}>
-            <Text>Create a New Patient</Text>
-          </TouchableOpacity>
-        </View>
-      ) : (
-        <TabsNavigation />
-      )}
+    {
+      data?.length ===0 ? (<View className="flex-1 justify-center items-center">
+        <Text>A pill tracking system has not yet been set up</Text>
+        <Text>Click the button below</Text>
+        <TouchableOpacity onPress={handlerPress}>
+          <Text>Create a New Patient</Text>
+        </TouchableOpacity>
+      </View>) : ( <TabsNavigation />)
+    }
+   
     </>
   );
 };
