@@ -26,7 +26,7 @@ const Signup = ({ navigation }: SignupProp) => {
         </View>
         <View>
           <Text>Name</Text>
-          <TextInput style={globalStyles.textInput} placeholder="Enter Name"/>
+          <TextInput style={globalStyles.textInput} placeholder="Enter Name" placeholderTextColor="#BDC2C3" />
         </View>
         <Pressable onPress={handlerPress}>
           <Text style={globalStyles.fullSpreadBtn}>Sign up</Text>

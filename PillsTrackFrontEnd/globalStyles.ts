@@ -7,7 +7,7 @@ const globalStyles = StyleSheet.create({
   },
   fullSpreadBtn:{
     backgroundColor:'#1BB9E6',
-    padding:12,  
+    padding:11,  
     color:'#fff',
     textAlign:'center',
     borderRadius:5,
