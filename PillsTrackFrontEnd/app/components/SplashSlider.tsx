@@ -6,6 +6,7 @@ import {
   Animated,
 } from "react-native";
 import React, { useRef } from "react";
+import globalStyles from "@/globalStyles";
 
 interface IText {
   slideText: string;
@@ -18,24 +19,25 @@ const SplashSlider = () => {
 
   const slideItem: IText[] = [
     {
-      slideText: "tis is the first text",
+      slideText: "Monitor Your Own Medicine",
       id: "1",
     },
     {
-      slideText: "tis is the second text",
+      slideText: "Track Your Family Medicine",
       id: "2",
     },
     {
-      slideText: "tis is the Third text",
+      slideText: "Give a Reminder Call",
       id: "3",
     },
   ];
   return (
+    
     <FlatList
       data={slideItem}
       renderItem={({ item }) => (
-        <View style={{ width }}>
-          <Text style={{ fontSize: 24 }}>{item.slideText}</Text>
+        <View style={[{ width }, globalStyles.sliderCard]} className="items-center">
+          <Text style={{ fontSize: 21, padding:7 }}>{item.slideText}</Text>
         </View>
       )}
       horizontal
