@@ -24,7 +24,7 @@ const SplashScreen = ({ navigation }: SplashProps) => {
   };
   return (
     <GestureHandlerRootView>
-      <SafeAreaView className="h-full">
+      <SafeAreaView className="h-full bg-white">
         {/* <ScrollView contentContainerStyle={{ flexGrow: 1 }}> */}
         <View className="flex-1 justify-center">
           <View className="justify-center items-center">
