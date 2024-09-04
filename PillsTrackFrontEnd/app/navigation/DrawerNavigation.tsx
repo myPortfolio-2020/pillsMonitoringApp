@@ -1,11 +1,10 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native";
 import React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import About from "../screens/About";
 import Support from "../screens/Support";
-import PreHome from "../screens/PreHome";
-import Svg, { Circle, Rect } from 'react-native-svg';
 import DrugsLog from "../screens/DrugsLogin";
+import images from "@/constants/images";
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigation = () => {
@@ -14,8 +13,8 @@ const DrawerNavigation = () => {
       screenOptions={{
         headerRight: () => (
           <View className="flex-row">
-            <Text className="pr-3">Notification</Text>
-            <Text className="pr-3">Profile</Text>
+            <Image source={images.NotificationIcon} className="mr-3" />
+            <Image source={images.ProfilePic} className="mr-6" />
           </View>
         ),
       }}

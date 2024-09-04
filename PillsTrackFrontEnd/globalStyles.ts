@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 
 const globalStyles = StyleSheet.create({
   screenPad: {    
-    padding: 16,    
+    padding: 16   
   },
   fullSpreadBtn:{
     backgroundColor:'#1BB9E6',
@@ -19,7 +19,9 @@ const globalStyles = StyleSheet.create({
     borderColor:'#E6E4E4',
     padding:11,
     marginTop:8,
-    marginBottom:8    
+    marginBottom:8,
+    borderRadius:5,
+    minWidth:54  
   }
 });
 

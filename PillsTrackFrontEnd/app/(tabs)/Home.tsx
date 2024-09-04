@@ -13,7 +13,7 @@ const Home = () => {
       <FlatList
         data={data}
         renderItem={({ item, index }) => {
-          const backgroundColor = index % 2 === 0 ? '#B7D7F5' : '#DDEDFC';
+          const backgroundColor = index % 2 === 0 ? '#d1e2f2' : '#DDEDFC';
           return (
             <View style={[styles.recordBox,{backgroundColor}]}>
               <Text>Patient Name:{item.userName}</Text>

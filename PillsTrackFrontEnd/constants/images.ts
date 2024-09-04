@@ -7,6 +7,7 @@ const images = {
     alaramIcon: require('./../assets/images/alaramIcon.png'),
     drugImg: require('./../assets/images/drugImg.png'),
     alarmIconOff: require('./../assets/images/alarmIconOff.png'),
+    backArrowIcon: require('./../assets/images/backArrowIcon.png')
 }
 
 export default images
