@@ -31,14 +31,29 @@ const SignIn = ({ navigation }: SignInProp) => {
 
   return (
     <View className="flex-1" style={globalStyles.screenPad}>
+      
       <View className="items-end mt-4">
         <Text>Not Yet Register? Sign Up</Text>
       </View>
       <View className="flex-1 justify-center">
-        <Image source={images.appLogo} />
-        <Text>Don’t let them forget</Text>
-        <Text>SignIn</Text>
-        <Text>Please enter details to login</Text>
+      <View className="flex-row items-center">
+            <Image source={images.appLogo} className="mb-2 mr-2" />
+            <Text
+              className="font-fLight uppercase"
+              style={globalStyles.logoStyle}
+            >
+              Drug <Text style={globalStyles.primaryCol}>log</Text>
+            </Text>
+          </View>
+
+          <Text
+            className="font-fLight uppercase mb-8"
+            style={[globalStyles.supportingCol, globalStyles.smTxt]}
+          >
+            Don’t let them forget
+          </Text>
+          <Text style={globalStyles.MidTxt}>Sign In</Text>
+          <Text className="mb-8">Please enter details to login</Text>
         <FormInput
           label="User name"
           value={form.username}
@@ -51,7 +66,7 @@ const SignIn = ({ navigation }: SignInProp) => {
           onChangeText={(e) => setForm({ ...form, password: e })}
           placeholder="Enter password"
         />
-        <Pressable onPress={handlerOnPress}>
+        <Pressable onPress={handlerOnPress}  className="mt-8">
           <Text style={globalStyles.fullSpreadBtn}>SignIn</Text>
         </Pressable>
       </View>

@@ -40,9 +40,24 @@ const Signup = ({ navigation }: SignupProp) => {
           <Text>Already a Member? Sign In</Text>
         </View>
         <View>
-          <Image source={images.appLogo} />
-          <Text>SignIn</Text>
-          <Text>Please enter details to register</Text>
+          <View className="flex-row items-center">
+            <Image source={images.appLogo} className="mb-2 mr-2" />
+            <Text
+              className="font-fLight uppercase"
+              style={globalStyles.logoStyle}
+            >
+              Drug <Text style={globalStyles.primaryCol}>log</Text>
+            </Text>
+          </View>
+
+          <Text
+            className="font-fLight uppercase mb-4"
+            style={[globalStyles.supportingCol, globalStyles.smTxt]}
+          >
+            Don’t let them forget
+          </Text>
+          <Text style={globalStyles.MidTxt}>Sign Up</Text>
+          <Text className="mb-4">Please enter details to register</Text>
           <FormInput
             label="Name"
             value={form.username}
@@ -73,7 +88,7 @@ const Signup = ({ navigation }: SignupProp) => {
             onChangeText={(e) => setForm({ ...form, confirmPassword: e })}
             placeholder="Confirm password"
           />
-        </View>  
+        </View>
         <View>
           <Pressable onPress={handlerPress}>
             <Text style={globalStyles.fullSpreadBtn}>Sign up</Text>

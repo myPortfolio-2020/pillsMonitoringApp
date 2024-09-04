@@ -29,8 +29,23 @@ const VerificationCode = ({ navigation }: VerificationCodeProp) => {
         <Image source={images.backArrowIcon} />
 
         <View className="flex-1 justify-center">
-          <Text>VerificationCode</Text>
-          <Text>Please enter details to login</Text>
+        <View className="flex-row items-center">
+            <Image source={images.appLogo} className="mb-2 mr-2" />
+            <Text
+              className="font-fLight uppercase"
+              style={globalStyles.logoStyle}
+            >
+              Drug <Text style={globalStyles.primaryCol}>log</Text>
+            </Text>
+          </View>   
+          <Text
+            className="font-fLight uppercase mb-8"
+            style={[globalStyles.supportingCol, globalStyles.smTxt]}
+          >
+            Don’t let them forget
+          </Text>     
+          <Text style={globalStyles.MidTxt}>VerificationCode</Text>
+          <Text className="mb-8">Please enter details to login</Text>
           <View className="items-center">
             <View>
               <Text>Verification code</Text>
@@ -43,7 +58,7 @@ const VerificationCode = ({ navigation }: VerificationCodeProp) => {
               </View>              
             </View>
             <Text>Didn’t receive an OTP?</Text>
-            <Text>Resend OTP</Text>
+            <Text className="mb-8 mt-4" style={globalStyles.primaryCol}>Resend OTP</Text>
           </View>
           <Pressable onPress={handlerOnPress}>
             <Text style={globalStyles.fullSpreadBtn}>Verify Code</Text>
