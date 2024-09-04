@@ -19,5 +19,13 @@ export const globalStyles = StyleSheet.create({
       color: '#fff',
       textAlign: 'center',
     },
+    BgHding:{
+      fontSize:24,
+      marginTop:20,
+      marginBottom:20
+    },
+    logoStyle:{
+      fontSize: 34
+    }
     // Add more styles as needed
   });
