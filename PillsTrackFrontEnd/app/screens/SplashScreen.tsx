@@ -29,7 +29,7 @@ const SplashScreen = ({ navigation }: SplashProps) => {
         <View className="flex-1 justify-center">
           <View className="justify-center items-center">
             <Image source={images.appLogo} />
-            <Text className="font-fExtraBoldItalic" style={globalStyles.logoStyle}>Drug log</Text>
+            <Text className="font-fExtraBoldItalic">Drug log</Text>
             <Text className="font-fExtraBoldItalic">Don’t let them forget</Text>
             <Image source={images.splashImg} resizeMode="contain" />
             <Text>How it is helpful?</Text>
