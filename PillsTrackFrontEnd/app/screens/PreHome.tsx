@@ -23,7 +23,7 @@ interface IPreHomePro {
 const PreHome = ({ navigation }: IPreHomePro) => {
 
   const { data } = useGetPatientsQuery();
-  console.log(data?.length)
+  console.log('this is preHome', data?.length)
 
   const handlerPress = () => {
     navigation.navigate("CreateNewPatient");
@@ -32,7 +32,7 @@ const PreHome = ({ navigation }: IPreHomePro) => {
   return (
     <>
     {
-      data?.length ===0 ? (<View className="flex-1 justify-center items-center">
+      data?.length === 0 ? (<View className="flex-1 justify-center items-center">
         <Text>A pill tracking system has not yet been set up</Text>
         <Text>Click the button below</Text>
         <TouchableOpacity onPress={handlerPress}>

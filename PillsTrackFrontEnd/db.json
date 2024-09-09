@@ -39,6 +39,11 @@
       "userCategory": "user",
       "userId": "8",
       "userName": "Derick"
+    },
+    {
+      "userCategory": "user",
+      "userId": "9",
+      "userName": "Mac"
     }
   ]
 }

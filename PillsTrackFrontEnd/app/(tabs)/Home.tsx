@@ -5,6 +5,7 @@ import { useGetPatientsQuery } from "../redux/slices/api";
 const Home = () => {
   const { data } = useGetPatientsQuery();
   // const patients = Array.isArray(data) ? data : [];
+  console.log('this is Home Component', data?.length)
 
   return (
     <View>
