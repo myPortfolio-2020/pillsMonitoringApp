@@ -13,12 +13,15 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import images from "./../../constants/images";
 import SplashSlider from "../components/SplashSlider";
 import globalStyles from "./../../globalStyles";
+import { useGetPatientsQuery } from "../redux/slices/api";
 
 interface SplashProps {
   navigation: NativeStackNavigationProp<RootStackParamList, "SplashScreen">;
 }
 
 const SplashScreen = ({ navigation }: SplashProps) => {
+const {data} = useGetPatientsQuery()
+console.log('splashScreen', data?.length)
   const handlerPress = () => {
     navigation.navigate("Signup");
   };

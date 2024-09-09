@@ -8,6 +8,7 @@ import images from "@/constants/images";
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigation = () => {
+  console.log('I am Drawer')
   return (
     <Drawer.Navigator
       screenOptions={{

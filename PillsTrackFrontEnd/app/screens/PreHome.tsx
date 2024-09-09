@@ -4,6 +4,7 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootInnerStackParamList } from "./DrugsLogin";
 import { useGetPatientsQuery } from "../redux/slices/api";
 import DataFound from "./DataFound";
+import TabsNavigation from "../navigation/TabsNavigation";
 
 interface IPreHomePro {
   navigation: NativeStackNavigationProp<RootInnerStackParamList, "PreHome">;
@@ -27,7 +28,7 @@ const PreHome = ({ navigation }: IPreHomePro) => {
         <TouchableOpacity onPress={handlerPress}>
           <Text>Create a New Patient</Text>
         </TouchableOpacity>
-      </View>) : ( <DataFound />)
+      </View>) : (   <TabsNavigation/>)
     }
    
     </>

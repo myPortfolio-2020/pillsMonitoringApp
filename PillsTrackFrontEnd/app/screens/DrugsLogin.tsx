@@ -11,7 +11,7 @@ export type RootInnerStackParamList = {
   CreateNewPatient: undefined;
   PreHome: undefined;
 };
-
+console.log('I am drugsLogin')
 const DrugsLog = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
