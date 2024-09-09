@@ -16,7 +16,7 @@ interface ISignInFields {
   usernameError: string;
   passwordError: string;
 }
-
+console.log('signin')
 const SignIn = ({ navigation }: SignInProp) => {
   const [form, setForm] = useState<ISignInFields>({
     username: "",

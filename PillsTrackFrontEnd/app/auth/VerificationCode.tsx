@@ -17,7 +17,7 @@ interface VerificationCodeProp {
 interface IVerifiyCode {
   verificationCode: string;
 }
-
+console.log('veri')
 const VerificationCode = ({ navigation }: VerificationCodeProp) => {
   const [verificationCode, setVerificationCode] = useState<IVerifiyCode>();
   const handlerOnPress = () => {

@@ -19,7 +19,7 @@ interface IFields {
   usernameError: string;
   passwordError: string;
 }
-
+console.log('signup')
 const Signup = ({ navigation }: SignupProp) => {
   const [form, setForm] = useState<IFields>({
     username: "",
