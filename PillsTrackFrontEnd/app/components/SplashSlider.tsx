@@ -7,6 +7,7 @@ import {
 } from "react-native";
 import React, { useRef } from "react";
 import globalStyles from "@/globalStyles";
+import { useGetPatientsQuery } from "../redux/slices/api";
 
 interface IText {
   slideText: string;
@@ -14,6 +15,8 @@ interface IText {
 }
 
 const SplashSlider = () => {
+  const { data } = useGetPatientsQuery();
+  console.log('this is splash', data?.length)
   const { width } = useWindowDimensions();
   const scrollX = useRef(new Animated.Value(0)).current;
 

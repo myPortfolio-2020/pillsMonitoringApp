@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../navigation/StackNavigation";
 import globalStyles from "@/globalStyles";
-import { SafeAreaView } from "react-native-safe-area-context";
 import images from "@/constants/images";
 import FormInput from "../components/FormInput";
 
@@ -72,9 +71,7 @@ const SignIn = ({ navigation }: SignInProp) => {
             <Text style={globalStyles.fullSpreadBtn}>SignIn</Text>
           </Pressable>
         </View>
-        </View>
-
-     
+        </View>     
       </View>
     </View>
   );

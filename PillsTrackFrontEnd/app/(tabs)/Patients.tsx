@@ -1,7 +1,7 @@
 import { View, Text, FlatList } from "react-native";
 import React from "react";
 import { useGetPatientsQuery } from "../redux/slices/api";
-import globalStyles from "@/globalStyles";
+
 
 const Patients = () => {
   const { data } = useGetPatientsQuery();
