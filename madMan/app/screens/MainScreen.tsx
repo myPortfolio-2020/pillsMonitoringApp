@@ -10,7 +10,7 @@ const Drawer = createDrawerNavigator();
 const MainScreen = () => {
   return (
     <Drawer.Navigator drawerContent={(props:DrawerContentComponentProps)=><SideBar {...props}/>}>
-      <Drawer.Screen name='HomeScreen' component={HomeScreen} />
+      <Drawer.Screen name='HomeScreen' component={HomeScreen} options={{headerShown:false}} />
     </Drawer.Navigator>
   )
 }
