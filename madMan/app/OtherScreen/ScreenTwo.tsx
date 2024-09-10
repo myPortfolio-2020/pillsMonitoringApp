@@ -4,7 +4,7 @@ import Menu from './Menu'
 
 const ScreenTwo = () => {
   return (
-    <View>
+    <View style={{backgroundColor:'#bbcc22', width:'100%', height:400}}>
       <Text>ScreenTwo</Text>
       <Text>This is Screen Two</Text>
       <View className="mt-10">

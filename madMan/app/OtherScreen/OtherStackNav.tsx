@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ScreenOne from "./ScreenOne";
 import ScreenTwo from "./ScreenTwo";
 import ScreenThree from "./ScreenThree";
+import ScreenOneDetail from "./ScreenOneDetail";
 
 const Stack = createNativeStackNavigator();
 const OtherStackNav = () => {
@@ -12,6 +13,7 @@ const OtherStackNav = () => {
       <Stack.Screen name="ScreenOne" component={ScreenOne} />
       <Stack.Screen name="ScreenTwo" component={ScreenTwo} />
       <Stack.Screen name="ScreenThree" component={ScreenThree} />
+      <Stack.Screen name="ScreenOneDetail" component={ScreenOneDetail} />
     </Stack.Navigator>
   );
 };

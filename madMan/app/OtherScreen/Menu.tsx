@@ -9,13 +9,13 @@ const Menu = () => {
     <View>
       <Text>Menu</Text>
       <TouchableOpacity onPress={()=> navigation.push('ScreenOne')}>
-        <Text>Screen One</Text>
+        <Text>GoTo Screen One</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=> navigation.navigate('ScreenTwo')}>
-        <Text>Screen Two</Text>
+        <Text>GoToScreen Two</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=> navigation.navigate('ScreenThree')}>
-        <Text>Screen Three</Text>
+        <Text>GoToScreen Three</Text>
       </TouchableOpacity>
     </View>
   )
