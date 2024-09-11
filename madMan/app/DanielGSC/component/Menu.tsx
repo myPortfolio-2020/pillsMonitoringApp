@@ -8,17 +8,17 @@ const Menu = () => {
       <TouchableOpacity onPress={()=>{
         // goto 
       }}>
-        <Text>Explore</Text>
+        <Text className="text-lg">Explore</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=>{
         // goto 
       }}>
-        <Text>Resturant</Text>
+        <Text className="text-lg">Resturant</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=>{
         // goto 
       }}>
-        <Text>Profile</Text>
+       <Text className="text-lg">Profile</Text>
       </TouchableOpacity>
     </View>
   );

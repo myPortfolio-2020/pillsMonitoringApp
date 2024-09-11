@@ -1,7 +1,7 @@
 import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import ResturanantsCard from "../component/ResturanantsCard";
-import Menu from "@/app/OtherScreen/Menu";
+import Menu from "@/app/DanielGSC/component/Menu";
 
 const Resturants = () => {
   return (
@@ -13,7 +13,7 @@ const Resturants = () => {
           <ResturanantsCard name="Burger Resturant" />
           <ResturanantsCard name="Fine Dining Resturant" />
         </ScrollView>
-        <Menu />
+       <Menu/>
       </View>
     </View>
   );
