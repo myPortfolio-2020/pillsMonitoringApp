@@ -13,8 +13,9 @@ const Explore = () => {
         <Text className="mb-3 mt-3 font-semibold text-2xl">Most Popular</Text>
         <ResturanantsCard name="Suchi Resturant" />
         <ResturanantsCard name="Burger Resturant" />
+        <Menu/>
       </View>
-      <Menu/>
+    
     </View>
   );
 };

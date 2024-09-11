@@ -8,7 +8,7 @@ const Menu = () => {
     <View className="mb-9">
       <Text className="mb-3 font-semibold text-2xl">Navigation</Text>
       <TouchableOpacity onPress={()=>{
-        navigation.navigate('Explore')
+        navigation.push('Explore')
       }}>
         <Text className="text-lg pt-2">Explore</Text>
       </TouchableOpacity>

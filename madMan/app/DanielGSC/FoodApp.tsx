@@ -5,7 +5,13 @@ import Explore from "./screens/Explore";
 import Resturants from "./screens/Resturants";
 import Profile from "./screens/Profile";
 
-const Stack = createNativeStackNavigator();
+export type RootParamList = {
+    Explore;
+    Profile;
+    Resturants;
+}
+
+const Stack = createNativeStackNavigator<RootParamList>();
 const FoodApp = () => {
   return (
     <Stack.Navigator>
