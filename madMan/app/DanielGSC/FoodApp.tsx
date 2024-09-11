@@ -1,18 +1,19 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import Explore from './screens/Explore'
-import Resturants from './screens/Resturants'
-import Profile from './screens/Profile'
+import { View, Text } from "react-native";
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Explore from "./screens/Explore";
+import Resturants from "./screens/Resturants";
+import Profile from "./screens/Profile";
 
+const Stack = createNativeStackNavigator();
 const FoodApp = () => {
   return (
-    <View className='flex-1  items-center'>
-      <Text className='mb-11 font-semibold text-2xl'>FoodApp</Text>     
-      <Text className='mb-1 font-semibold text-lg'>Explore</Text>
-      <Text className='mb-1 font-semibold text-lg'>Resturants</Text>
-      <Text className='mb-1 font-semibold text-lg'>Profile</Text>
-    </View>
-  )
-}
+    <Stack.Navigator>
+      <Stack.Screen name="Explore" component={Explore} />
+      <Stack.Screen name="Resturants" component={Resturants} />
+      <Stack.Screen name="Profile" component={Profile} />
+    </Stack.Navigator>
+  );
+};
 
-export default FoodApp
+export default FoodApp;
