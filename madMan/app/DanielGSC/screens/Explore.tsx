@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import ResturanantsCard from "../component/ResturanantsCard";
-
+import Menu from "@/app/DanielGSC/component/Menu";
 const Explore = () => {
   return (
     <View className="flex-1">
@@ -14,6 +14,7 @@ const Explore = () => {
         <ResturanantsCard name="Suchi Resturant" />
         <ResturanantsCard name="Burger Resturant" />
       </View>
+      <Menu/>
     </View>
   );
 };
