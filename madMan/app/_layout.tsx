@@ -5,14 +5,19 @@ import { NavigationContainer } from "@react-navigation/native";
 import OtherStackNav from "./OtherScreen/OtherStackNav";
 import FoodApp from "./DanielGSC/FoodApp";
 import SolveApp from "./solves/SolveApp";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import CheckStack from "./check/CheckStack";
 
 const _layout = () => {
   return <NavigationContainer independent={true}>
+      <Provider store={store}>      
     {/* <AppNavigator /> */}
     {/* <OtherStackNav/> */}
     {/* <FoodApp/> */}
-    <SolveApp/>
-
+    {/* <SolveApp/> */}
+    <CheckStack/>
+    </Provider>
   </NavigationContainer>;
 };
 
