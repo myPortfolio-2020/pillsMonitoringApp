@@ -4,12 +4,14 @@ import AppNavigator from "./AppNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import OtherStackNav from "./OtherScreen/OtherStackNav";
 import FoodApp from "./DanielGSC/FoodApp";
+import SolveApp from "./solves/SolveApp";
 
 const _layout = () => {
   return <NavigationContainer independent={true}>
     {/* <AppNavigator /> */}
     {/* <OtherStackNav/> */}
-    <FoodApp/>
+    {/* <FoodApp/> */}
+    <SolveApp/>
 
   </NavigationContainer>;
 };
