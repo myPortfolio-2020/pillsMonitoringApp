@@ -14,9 +14,9 @@ const _layout = () => {
       <Provider store={store}>      
     {/* <AppNavigator /> */}
     {/* <OtherStackNav/> */}
-    {/* <FoodApp/> */}
+    <FoodApp/>
     {/* <SolveApp/> */}
-    <CheckStack/>
+    {/* <CheckStack/> */}
     </Provider>
   </NavigationContainer>;
 };
