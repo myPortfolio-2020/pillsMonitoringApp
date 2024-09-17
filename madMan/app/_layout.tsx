@@ -8,15 +8,18 @@ import SolveApp from "./solves/SolveApp";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import CheckStack from "./check/CheckStack";
+import Practice from "./drVpin/Practice";
+import RootStack from "./drVpin/RootStack";
 
 const _layout = () => {
   return <NavigationContainer independent={true}>
       <Provider store={store}>      
     {/* <AppNavigator /> */}
     {/* <OtherStackNav/> */}
-    <FoodApp/>
+    {/* <FoodApp/> */}
     {/* <SolveApp/> */}
     {/* <CheckStack/> */}
+    <RootStack/>
     </Provider>
   </NavigationContainer>;
 };

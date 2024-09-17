@@ -36,7 +36,7 @@ console.log('splashScreen', data?.length)
               className="font-fLight uppercase"
               style={globalStyles.logoStyle}
             >
-              Drug <Text style={globalStyles.primaryCol}>log--150Rs TO Javeria</Text>
+              Drug <Text style={globalStyles.primaryCol}>log</Text>
             </Text>
             <Text
               className="font-fLight uppercase mb-10"
