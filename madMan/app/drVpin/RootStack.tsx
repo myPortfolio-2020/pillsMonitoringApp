@@ -1,7 +1,6 @@
 import { View, Text, Pressable } from 'react-native'
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import POne from './PractScreen/POne';
 import PTwo from './PractScreen/PTwo';
 
 export type RootStackParams = {

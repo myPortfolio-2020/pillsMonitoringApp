@@ -2,7 +2,6 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import DOne from './DOne';
-import DTwo from './DTwo';
 import SideBar from '@/app/SideBar';
 
 const Drawer = createDrawerNavigator();
