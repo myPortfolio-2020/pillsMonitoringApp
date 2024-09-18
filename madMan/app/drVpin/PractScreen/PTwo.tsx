@@ -4,7 +4,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import PThree from './PThree';
 import PFour from './PFour';
 import PFive from './PFive';
-import PDrawer from './PDrawer';
 
 const Tab = createBottomTabNavigator();
 
