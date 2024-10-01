@@ -12,16 +12,14 @@ import {
   import images from "./../../constants/images";
   import SplashSlider from "../components/SplashSlider";
   import globalStyles from "./../../globalStyles";
-  import { useGetPatientsQuery } from "../redux/slices/api";
 import { RootStackParamList } from "../navigation/StackNavigation";
   
   interface SplashProps {
     navigation: NativeStackNavigationProp<RootStackParamList, "Splash">;
   }
   
-  const Splash = ({ navigation }: SplashProps) => {
-  const {data} = useGetPatientsQuery()
-  console.log('splashScreen', data?.length)
+  const Splash = ({ navigation }: SplashProps) => {  
+
     const handlerPress = () => {
       navigation.navigate("Signup");
     };

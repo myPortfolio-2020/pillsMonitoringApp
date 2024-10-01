@@ -1,6 +1,6 @@
 // src/App.tsx
 import React from "react";
-import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, Pressable } from "react-native";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -36,7 +36,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
           };
 
           return (
-            <TouchableOpacity
+            <Pressable
               key={route.key}
               accessibilityRole="button"
               accessibilityState={isFocused ? { selected: true } : {}}
@@ -57,16 +57,16 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({
                 size={24}
                 color={isFocused ? "#1BB9E6" : "#191516"}
               />
-            </TouchableOpacity>
+            </Pressable>
           );
         })}
       </View>
-      <TouchableOpacity
+      <Pressable
         style={styles.floatingButton}
         onPress={() => navigation.navigate("CreateNewPatient")}
       >
         <Ionicons name="add" size={30} color="white" />
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 };

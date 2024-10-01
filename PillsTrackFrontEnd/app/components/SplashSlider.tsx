@@ -7,7 +7,6 @@ import {
 } from "react-native";
 import React, { useRef } from "react";
 import globalStyles from "@/globalStyles";
-import { useGetPatientsQuery } from "../redux/slices/api";
 
 interface IText {
   slideText: string;

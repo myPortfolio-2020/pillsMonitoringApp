@@ -67,7 +67,7 @@ const globalStyles = StyleSheet.create({
   sliderCard:{
     backgroundColor:'#FFF5F1',
     borderColor:'#DDD',
-    shadowColor:'ddd',   
+    // shadowColor:'ddd',   
     maxWidth:340,
     marginBottom:20,
     marginTop:20,
