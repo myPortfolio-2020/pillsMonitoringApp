@@ -1,10 +1,10 @@
 import {
     View,
-    Text,
-    TouchableOpacity,
+    Text,    
     StyleSheet,
     SafeAreaView,
     Image,
+    Pressable,
   } from "react-native";
   import React from "react";
   import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -47,9 +47,9 @@ import { RootStackParamList } from "../navigation/StackNavigation";
                 How it is <Text style={globalStyles.primaryCol}>helpful?</Text>
               </Text>          
                 <SplashSlider /> 
-              <TouchableOpacity>
+              <Pressable>
                 <Text onPress={handlerPress}  style={globalStyles.startBtn}>Start</Text>
-              </TouchableOpacity>
+              </Pressable>
             </View>
           </View>
           {/* </ScrollView> */}
