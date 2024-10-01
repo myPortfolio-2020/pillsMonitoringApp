@@ -7,13 +7,13 @@ import {
     Image,
   } from "react-native";
   import React from "react";
-  import { RootStackParamList } from "../navigation/StackNavigation";
   import { NativeStackNavigationProp } from "@react-navigation/native-stack";
   import { GestureHandlerRootView } from "react-native-gesture-handler";
   import images from "./../../constants/images";
   import SplashSlider from "../components/SplashSlider";
   import globalStyles from "./../../globalStyles";
   import { useGetPatientsQuery } from "../redux/slices/api";
+import { RootStackParamList } from "../navigation/StackNavigation";
   
   interface SplashProps {
     navigation: NativeStackNavigationProp<RootStackParamList, "Splash">;

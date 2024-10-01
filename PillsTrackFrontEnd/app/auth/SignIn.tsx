@@ -25,7 +25,7 @@ const SignIn = ({ navigation }: SignInProp) => {
     passwordError: "",
   });
   const handlerOnPress = () => {
-    navigation.navigate("DrawerNavigation");
+    
   };
 
   return (

@@ -6,7 +6,14 @@ import Signup from '../auth/Signup';
 import VerificationCode from '../auth/VerificationCode';
 import SignIn from '../auth/SignIn';
 
-const Stack = createStackNavigator();
+export type RootStackParamList = {
+  Splash: undefined;
+  Signup: undefined;
+  VerificationCode: undefined;
+  SignIn: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 const StackNavigation = () => {
   return (
