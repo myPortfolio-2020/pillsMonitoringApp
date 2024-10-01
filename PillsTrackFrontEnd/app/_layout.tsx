@@ -1,11 +1,12 @@
 import { View, Text, StyleSheet } from "react-native";
 import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import StackNavigation from "./navigation/StackNavigation";
+
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import StackNavigation from "./navigation/StackNavigation";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -40,7 +41,7 @@ const _layout = () => {
     <>
       <NavigationContainer independent={true}>
         <Provider store={store}>
-          <StackNavigation />
+          <StackNavigation/>
         </Provider>
       </NavigationContainer>
     </>
