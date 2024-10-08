@@ -10,6 +10,7 @@ import { store } from "./redux/store";
 import CheckStack from "./check/CheckStack";
 import Practice from "./drVpin/Practice";
 import RootStack from "./drVpin/RootStack";
+import Pnav from "./lessons/practiceOne/Pnav";
 
 const _layout = () => {
   return <NavigationContainer independent={true}>
@@ -19,7 +20,8 @@ const _layout = () => {
     {/* <FoodApp/> */}
     {/* <SolveApp/> */}
     {/* <CheckStack/> */}
-    <RootStack/>
+    {/* <RootStack/> */}
+    <Pnav/>
     </Provider>
   </NavigationContainer>;
 };
