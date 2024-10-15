@@ -7,7 +7,8 @@ import OnBording from "./(onBoarding)/onBording";
 // what is happeningnhere, it comes to index file and redirect to onBoarding
 
 const index = () => {
-  return <Redirect href={"/(onBoarding)/OnBording"} />;
+  // return <Redirect href={"/(onBoarding)/OnBording"} />;
+  return <Redirect href={"/Hooks"} />;
 };
 
 export default index;
