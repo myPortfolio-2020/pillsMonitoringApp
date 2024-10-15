@@ -29,7 +29,7 @@ export default function RootLayout() {
   return (
     
       <Stack>
-        <Stack.Screen name="(onBoarding)/OnBoarding" />
+        <Stack.Screen name="(onBoarding)/OnBording" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
         
