@@ -1,27 +1,29 @@
 import { View, Text,StyleSheet, Image } from 'react-native'
-import {logo} from './../../constants/images'
+import {onBoardImg1} from './../../constants/images'
+import {onBoardImg2} from './../../constants/images'
 import React from 'react'
 import { OnboardFlow } from 'react-native-onboard';
+// https://www.npmjs.com/package/react-native-onboard
 
 const OnBording = () => {
 
-   const pages = [
+   const Pages = [
     {
         title: 'Welcome to my app',
-        subtitle: 'This is page 1',
-        imageUri: 'https://frigade.com/img/example1.png',
+        subtitle: 'page 1',
+        imageUri: Image.resolveAssetSource(require('onBoardImg1')).uri
       },
       {
-        title: 'Welcome to my app',
-        subtitle: 'This is page 1',
-        imageUri: 'https://frigade.com/img/example1.png',
+        title: 'Barbar Intro',
+        subtitle: 'page 2 ',
+        imageUri: Image.resolveAssetSource(require('onBoardImg1')).uri
       },
    ] 
   return (
     <View style={styles.container}>     
       {/* <Image source={require('../../assets/images/logo.png')} /> */}
       {/* <Image source={logo} /> */}
-      <OnboardFlow pages = {pages} type={'fullscreen'}
+      <OnboardFlow pages = {Pages} type={'fullscreen'}
     />
     </View>
   )
