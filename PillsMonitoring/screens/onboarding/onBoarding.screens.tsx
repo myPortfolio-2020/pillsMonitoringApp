@@ -1,7 +1,8 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { styles } from "@/styles/styles";
+import { router } from "expo-router";
 
 const OnBoardingScreens = () => {
   return (
@@ -10,8 +11,11 @@ const OnBoardingScreens = () => {
       style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
     >
       <View>
-        <Text>sdg</Text>
+        <Text>Start Learning With Me</Text>
       </View>
+      <TouchableOpacity style={styles.btn} onPress={()=>router.push('/(routes)/WelcomeIntro')}>
+        <Text>Get Started</Text>
+      </TouchableOpacity>
     </LinearGradient>
   );
 };

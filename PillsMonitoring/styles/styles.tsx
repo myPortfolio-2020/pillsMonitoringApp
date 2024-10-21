@@ -10,6 +10,13 @@ export const styles = StyleSheet.create({
         // flex:1,
         // alignItems:"center",
         // marginTop:50
+    },
+    btn:{
+        padding:11,
+        backgroundColor:'#e70ab4',
+        margin:20,
+        borderRadius:6
     }
+
 })
 
