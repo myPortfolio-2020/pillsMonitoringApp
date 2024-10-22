@@ -5,11 +5,13 @@ import { styles } from "@/styles/styles";
 const LoginScreen = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState<Boolean>(false);
   const [buttonSpinner, setButtonSpinner] = useState(false);
+
   const [userInfo, setUserInfo] = useState({
     email: "",
     password: "",
   });
-  const [required, setRequired] = useState("");
+
+  const [required, setRequired] = useState("");  
   const [error, setError] = useState({
     password: "",
   });
@@ -30,12 +32,21 @@ const LoginScreen = () => {
         ...error,
         password: "write atleast one number ",
       });
+      setUserInfo({ ...userInfo, password: "" });
     } else if (!passwordSixValue.test(password)) {
       setError({
         ...error,
         password: "Atleast six characters require",
       });
+      setUserInfo({ ...userInfo, password: "" });
+    } else {
+      setError({
+        ...error,
+        password:''
+      })
+      setUserInfo({ ...userInfo, password: value });
     }
+    
   };
 
   return (
@@ -45,7 +56,7 @@ const LoginScreen = () => {
         style={styles.inputStyle}
         keyboardType="email-address"
         value={userInfo.email}
-        onChangeText={(value) => {
+        onChangeText={(value:string) => {
           setUserInfo({ ...userInfo, email: value });
         }}
       />
@@ -55,8 +66,9 @@ const LoginScreen = () => {
         </View>
       )}
       <TextInput
-        style={styles.inputStyle}
+        style={styles.inputStyle}              
         value={userInfo.password}
+        keyboardType="default"
         secureTextEntry={!isPasswordVisible}
         defaultValue=""
         placeholder="*****"
