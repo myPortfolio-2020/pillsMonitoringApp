@@ -1,3 +1,4 @@
+// stped at 1:22
 import { View, Text, TextInput } from "react-native";
 import React, { useState } from "react";
 import { styles } from "@/styles/styles";
@@ -43,10 +44,9 @@ const LoginScreen = () => {
       setError({
         ...error,
         password:''
-      })
-      setUserInfo({ ...userInfo, password: value });
+      })     
     }
-    
+    setUserInfo({ ...userInfo, password: value });
   };
 
   return (
