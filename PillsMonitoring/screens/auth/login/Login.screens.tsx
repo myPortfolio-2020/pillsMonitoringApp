@@ -69,8 +69,7 @@ const LoginScreen = () => {
         style={styles.inputStyle}              
         value={userInfo.password}
         keyboardType="default"
-        secureTextEntry={!isPasswordVisible}
-        defaultValue = ""
+        secureTextEntry={!isPasswordVisible}      
         placeholder = "*****"
         onChangeText = {handlePasswordValidation}
       />
@@ -84,3 +83,28 @@ const LoginScreen = () => {
 };
 
 export default LoginScreen;
+
+// import { View, Text, TextInput } from 'react-native'
+// import React, {useState} from 'react'
+// import { styles } from "@/styles/styles";
+// const LoginScreens = () => {
+//   const [userInfo, setUserInfo] = useState({
+//     user:'',
+//     password:''
+//   })
+//   return (
+//     <View style={{flex:1, justifyContent:'center' , alignItems:'center'}}>
+//       <Text>Login.screens</Text>
+//       <TextInput style={styles.inputStyle} 
+//       value={userInfo.password}
+//       onChangeText={(value:string)=>{
+//         setUserInfo({
+//           ...userInfo, 
+//           password:value
+//         })
+//       }} />
+//     </View>
+//   )
+// }
+
+// export default LoginScreens
