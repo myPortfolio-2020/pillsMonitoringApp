@@ -1,12 +1,9 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from "react-native";
+import React from "react";
+import WelcomeScreen from "@/screens/welcome/WelcomeScreen";
 
-const WelcomeIntro = () => {
-  return (
-    <View>
-      <Text>WelcomeIntro</Text>
-    </View>
-  )
-}
+const welcomeIntro = () => {
+  return <WelcomeScreen />;
+};
 
-export default WelcomeIntro
+export default welcomeIntro;

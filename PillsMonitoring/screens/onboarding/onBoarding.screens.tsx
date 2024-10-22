@@ -13,7 +13,7 @@ const OnBoardingScreens = () => {
       <View>
         <Text>Start Learning With Me</Text>
       </View>
-      <TouchableOpacity style={styles.btn} onPress={()=>router.push('/(routes)/WelcomeIntro')}>
+      <TouchableOpacity style={styles.btn} onPress={()=>router.push('/(routes)/welcomeIntro')}>
         <Text>Get Started</Text>
       </TouchableOpacity>
     </LinearGradient>
