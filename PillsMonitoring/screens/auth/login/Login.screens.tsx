@@ -11,32 +11,32 @@ const LoginScreen = () => {
   });
   const [required, setRequired] = useState("");
   const [error, setError] = useState({
-    password:''
-  })
+    password: "",
+  });
 
-  const handlePasswordValidation = (value:string)=>{
+  const handlePasswordValidation = (value: string) => {
     const password = value;
     const passwordSpecialCharacter = /[!@#$%^&*(),.?":{}|<>]/;
     const passwordOneNumber = /(?=.*[0-9])/;
-    const passwordSixValue = /(?=.{6,})/
-    if(!passwordSpecialCharacter.test(password)){
+    const passwordSixValue = /(?=.{6,})/;
+    if (!passwordSpecialCharacter.test(password)) {
       setError({
         ...error,
-        password:'write atleast On specail Characters!'
-      })
-      setUserInfo({...userInfo, password:''})
-    } else if(!passwordOneNumber.test(password)){
+        password: "write atleast On specail Characters!",
+      });
+      setUserInfo({ ...userInfo, password: "" });
+    } else if (!passwordOneNumber.test(password)) {
       setError({
         ...error,
-        password:'write atleast one number '
-      })
-    }else if(!passwordSixValue.test(password)){
+        password: "write atleast one number ",
+      });
+    } else if (!passwordSixValue.test(password)) {
       setError({
         ...error,
-        password:'Atleast six characters require'
-      })
+        password: "Atleast six characters require",
+      });
     }
-  }
+  };
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
@@ -57,11 +57,16 @@ const LoginScreen = () => {
       <TextInput
         style={styles.inputStyle}
         value={userInfo.password}
-        secureTextEntry= {!isPasswordVisible}
+        secureTextEntry={!isPasswordVisible}
         defaultValue=""
-        placeholder={'*****'}
-       onChangeText={handlePasswordValidation}
+        placeholder={"*****"}
+        onChangeText={handlePasswordValidation}
       />
+      {error.password && (
+        <View>
+          <Text>{error.password}</Text>
+        </View>
+      )}
     </View>
   );
 };
