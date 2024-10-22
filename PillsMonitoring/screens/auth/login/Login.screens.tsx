@@ -70,9 +70,9 @@ const LoginScreen = () => {
         value={userInfo.password}
         keyboardType="default"
         secureTextEntry={!isPasswordVisible}
-        defaultValue=""
-        placeholder="*****"
-        onChangeText={handlePasswordValidation}
+        defaultValue = ""
+        placeholder = "*****"
+        onChangeText = {handlePasswordValidation}
       />
       {error.password && (
         <View>
