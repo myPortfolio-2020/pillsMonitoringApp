@@ -1,7 +1,8 @@
 // stped at 1:22
-import { View, Text, TextInput } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { styles } from "@/styles/styles";
+import { router } from "expo-router";
 
 const LoginScreen = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState<Boolean>(false);
@@ -78,6 +79,15 @@ const LoginScreen = () => {
           <Text>{error.password}</Text>
         </View>
       )}
+      <TouchableOpacity  style={styles.btn}>
+        <Text>GoogleLogin</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.btn}>
+        <Text>Sign In</Text>
+      </TouchableOpacity>
+      <TouchableOpacity  onPress={()=>router.push('/(routes)/signUp')}>
+        <Text>Don't have an account, SignUp</Text>
+      </TouchableOpacity>
     </View>
   );
 };
