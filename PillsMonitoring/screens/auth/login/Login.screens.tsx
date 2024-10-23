@@ -85,6 +85,9 @@ const LoginScreen = () => {
       <TouchableOpacity style={styles.btn}>
         <Text>Sign In</Text>
       </TouchableOpacity>
+      <TouchableOpacity onPress={()=>router.push('/(routes)/forgotPassword')}>
+        <Text>Forgot password?</Text>
+      </TouchableOpacity>
       <TouchableOpacity  onPress={()=>router.push('/(routes)/signUp')}>
         <Text>Don't have an account, SignUp</Text>
       </TouchableOpacity>

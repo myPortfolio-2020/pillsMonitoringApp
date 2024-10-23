@@ -54,6 +54,8 @@ function RootLayoutNav() {
           <Stack.Screen name="index"/>
           <Stack.Screen name="(routes)/welcomeIntro/index"/>
           <Stack.Screen name="(routes)/login/index"/>
+          <Stack.Screen name="(routes)/forgotPassword/index"/>
+          <Stack.Screen name="(routes)/signUp/index"/>
         </Stack>
       )}
     </View>
