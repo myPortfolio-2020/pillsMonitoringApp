@@ -27,3 +27,15 @@ app.ts
 
 
 npm i dotenv
+
+
+mongo
+elib
+
+username:rababportfolio2020
+pass:rabab14<>===7462jrhw
+
+
+
+npm i mongoose
+npm i -D mongoose @types/mongoose
