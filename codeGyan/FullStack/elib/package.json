@@ -1,0 +1,16 @@
+{
+  "name": "elib",
+  "version": "1.0.0",
+  "description": "ebook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rabab",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.8.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
