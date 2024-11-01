@@ -17,4 +17,13 @@ package.json
 
 create a file server.ts
 
+npm install express
+npm i -D @types/express
 
+create src folder
+app.ts
+
+
+
+
+npm i dotenv
