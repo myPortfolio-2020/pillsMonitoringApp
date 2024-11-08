@@ -11,15 +11,26 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { useMutation } from "@tanstack/react-query";
+
 
 function LoginPage() {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
+
+
+
+
+
   const handleLogin = () => {
     const email = emailRef.current?.value;
     const password = passwordRef.current?.value;
     console.log("data", { email, password });
+
+
+
+    // make server call
   };
 
   return (
