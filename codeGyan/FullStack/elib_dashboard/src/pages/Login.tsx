@@ -9,9 +9,19 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 function LoginPage() {
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
+
+  const handleLogin = () => {
+    const email = emailRef.current?.value;
+    const password = passwordRef.current?.value;
+    console.log("data", { email, password });
+  };
+
   return (
     <>
       <section className="flex justify-center items-center h-screen">
@@ -23,11 +33,18 @@ function LoginPage() {
           <CardContent>
             <div>
               <Label>Enter user</Label>
-              <Input id="email" type="email" placeholder="email" required />
+              <Input
+                ref={emailRef}
+                id="email"
+                type="email"
+                placeholder="email"
+                required
+              />
             </div>
             <div>
               <Label>Enter Password</Label>
               <Input
+                ref={passwordRef}
                 id="password"
                 type="password"
                 placeholder="password"
@@ -36,11 +53,11 @@ function LoginPage() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button>Sign In</Button>
+            <Button onClick={handleLogin}>Sign In</Button>
           </CardFooter>
           <div>
             Don't have an account,
-            <Link to={"/Register"} className="underline">
+            <Link to={"/auth/Register"} className="underline">
               Sign up
             </Link>
           </div>

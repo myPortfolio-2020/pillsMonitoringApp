@@ -51,7 +51,7 @@ function RegisterPage() {
           </CardFooter>
           <div>
             Already have an account,
-            <Link to={"/Login"} className="underline">
+            <Link to={"/auth/Login"} className="underline">
               Sign in
             </Link>
           </div>
