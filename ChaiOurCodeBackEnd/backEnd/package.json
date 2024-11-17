@@ -1,13 +1,13 @@
 {
-  "name": "chaibackend",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "learning to master",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
-    "start": "node index.ts"
+    "dev": "nodemon server.ts"
   },
   "author": "Rabab",
   "license": "ISC",
+  "description": "",
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.0",

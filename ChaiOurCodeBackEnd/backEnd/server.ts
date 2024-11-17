@@ -1,6 +1,6 @@
-// import express from "express";
+import express from "express";
+// const express = require("express");
 require("dotenv").config();
-const express = require("express");
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -19,6 +19,25 @@ app.get("/twitter", (req, res) => {
 
 app.get("/login", (req, res) => {
   res.send("<h1>this is h1<h1>");
+});
+
+const notesApi = [
+  {
+    nm: "ghasdj",
+    basd: "asdnvabsnd",
+  },
+  {
+    nm: "ghasdj",
+    basd: "asdnvabsnd",
+  },
+  {
+    nm: "ghasdj",
+    basd: "asdnvabsnd",
+  },
+];
+
+app.get("/apiNotes", (req, res) => {
+  res.json(notesApi);
 });
 
 app.listen(process.env.PORT, () => {
