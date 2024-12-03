@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 app.get("/", (req, res) => {
-  res.send("Hello World!!!!Hello World!!!!");
+  res.send("Hello World!!!!");
 });
 
 // Always use /with path like /twitter
