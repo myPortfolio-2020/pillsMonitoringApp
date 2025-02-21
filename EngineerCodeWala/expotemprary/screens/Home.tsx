@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import React from "react";
 import { useNavigation } from "expo-router";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -10,7 +10,7 @@ interface HomeScreenProps {
 
 const Home = ({ navigation }: HomeScreenProps) => {
   return (
-    <View className="flex-1">
+    <View className="flex-1" style={style.fbg}>
       <View className=" flex justify-items-center ">
         <TouchableOpacity onPress={() => navigation.navigate("About")}>
           <Text>About</Text>
@@ -24,3 +24,9 @@ const Home = ({ navigation }: HomeScreenProps) => {
 };
 
 export default Home;
+
+const style = StyleSheet.create({
+  fbg: {
+    backgroundColor: "#ccc",
+  },
+});
