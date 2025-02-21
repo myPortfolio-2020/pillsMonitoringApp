@@ -1,24 +1,24 @@
-import { View, Text, Button, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation } from "expo-router";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParamList } from "@/stackNavigator/StackNavigator";
 
-const Home = () => {
-  const navigation = useNavigation();
+interface HomeScreenProps {
+  navigation: StackNavigationProp<RootStackParamList, "Home">;
+}
+
+const Home = ({ navigation }: HomeScreenProps) => {
   return (
-    <View>
-      <Text>Home</Text>
-      <TouchableOpacity
-        onPress={() =>
-          navigation.navigate("ScreenA", {
-            user: {
-              nm: "Ahmed",
-              sal: 2000,
-            },
-          })
-        }
-      >
-        <Text>Go TO screen A</Text>
-      </TouchableOpacity>
+    <View className="flex-1">
+      <View className=" flex justify-items-center ">
+        <TouchableOpacity onPress={() => navigation.navigate("About")}>
+          <Text>About</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Help")}>
+          <Text>Help</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };

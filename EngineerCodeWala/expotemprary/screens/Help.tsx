@@ -1,12 +1,13 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const ScreenB = () => {
+const Help = () => {
   return (
     <View>
-      <Text>ScreenB</Text>
+      <Text>Help</Text>
+      <Text>content</Text>
     </View>
   );
 };
 
-export default ScreenB;
+export default Help;
