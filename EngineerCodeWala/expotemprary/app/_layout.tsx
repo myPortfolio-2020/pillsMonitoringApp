@@ -13,6 +13,7 @@ import "react-native-reanimated";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
 import StackNavigator from "@/stackNavigator/StackNavigator";
+import DrawerNavigation from "@/drawer/DrawerNavigation";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -33,5 +34,6 @@ export default function RootLayout() {
     return null;
   }
 
-  return ( <StackNavigator />);
+  // return ( <StackNavigator />);
+  return <DrawerNavigation />;
 }
