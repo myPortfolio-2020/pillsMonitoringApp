@@ -132,6 +132,8 @@ export type RootStackParamList = {
   Help: undefined;
 };
 
+const Stack = createStackNavigator<RootStackParamList>();
+
  <Stack.Navigator>
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="About" component={About} />
