@@ -8,11 +8,16 @@ import {
 import React from "react";
 import { DrawerContentComponentProps } from "@react-navigation/drawer";
 import { useNavigation } from "expo-router";
+import { NavigationProp } from "@react-navigation/native";
+import { RootStackParamList } from "@/stackNavigator/StackNavigator";
 
 type CustomDrawerProps = DrawerContentComponentProps;
+interface CustProp {
+  navigation: NavigationProp<RootStackParamList, 'Contact'>
+}
 
-const CustomDrawer: React.FC<CustomDrawerProps> = (props) => {
-  const navigation = useNavigation();
+const CustomDrawer: React.FC<CustomDrawerProps> = (props, {navigation}:CustProp) => {
+  
   return (
     <SafeAreaView>
       <View>
@@ -21,7 +26,7 @@ const CustomDrawer: React.FC<CustomDrawerProps> = (props) => {
           style={{ width: 100, height: 100 }}
         />
         <Text>ProvideLinks as TouchAbleOpacity</Text>
-        <TouchableOpacity onPress={() => navigation.navigate("Help")}>
+        <TouchableOpacity onPress={() => navigation.navigate("Contact")}>
           <Text>Help</Text>
         </TouchableOpacity>
       </View>

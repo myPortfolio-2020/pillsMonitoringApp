@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Home from "@/screens/Home";
 import Info from "@/screens/Info";
 import Support from "@/screens/Support";
+import Contact from "@/drawer/screens/Contact";
 
 export type RootStackParamList = {
   Home: undefined;
@@ -12,6 +13,7 @@ export type RootStackParamList = {
     sal: number;
   };
   Support: undefined;
+  Contact: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -22,6 +24,7 @@ const StackNavigator = () => {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Info" component={Info} />
       <Stack.Screen name="Support" component={Support} />
+      <Stack.Screen name="Contact" component={Contact} />
     </Stack.Navigator>
   );
 };
