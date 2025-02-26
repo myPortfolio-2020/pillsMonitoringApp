@@ -4,7 +4,6 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import About from "./screens/About";
 import Contact from "./screens/Contact";
 import Policies from "./screens/Policies";
-import CustomDrawer from "./screens/CustomDrawer";
 
 const Drawer = createDrawerNavigator();
 
@@ -17,7 +16,6 @@ const DrawerNavigation = () => {
         drawerActiveTintColor: "green",
         drawerInactiveTintColor: "red",
       }}
-      drawerContent={(props) => <CustomDrawer {...props} />}
     >
       <Drawer.Screen
         name="About"
