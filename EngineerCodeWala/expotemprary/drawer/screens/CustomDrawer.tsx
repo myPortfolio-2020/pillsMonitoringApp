@@ -6,18 +6,22 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
-import { DrawerContentComponentProps } from "@react-navigation/drawer";
+import {
+  DrawerContentComponentProps,
+  DrawerNavigationProp,
+} from "@react-navigation/drawer";
 import { useNavigation } from "expo-router";
-import { NavigationProp } from "@react-navigation/native";
-import { RootStackParamList } from "@/stackNavigator/StackNavigator";
 
 type CustomDrawerProps = DrawerContentComponentProps;
-interface CustProp {
-  navigation: NavigationProp<RootStackParamList, 'Contact'>
-}
 
-const CustomDrawer: React.FC<CustomDrawerProps> = (props, {navigation}:CustProp) => {
-  
+type DrawerParamList = {
+  Contact: undefined;
+  About: undefined;
+  Policies: undefined;
+};
+
+const CustomDrawer: React.FC<CustomDrawerProps> = (props) => {
+  const navigation = useNavigation<DrawerNavigationProp<DrawerParamList>>();
   return (
     <SafeAreaView>
       <View>
@@ -26,8 +30,24 @@ const CustomDrawer: React.FC<CustomDrawerProps> = (props, {navigation}:CustProp)
           style={{ width: 100, height: 100 }}
         />
         <Text>ProvideLinks as TouchAbleOpacity</Text>
-        <TouchableOpacity onPress={() => navigation.navigate("Contact")}>
-          <Text>Help</Text>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("About")}
+          style={{ margin: 10 }}
+        >
+          <Text>About</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Contact")}
+          style={{ margin: 10 }}
+        >
+          <Text>Contact</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Policies")}
+          style={{ margin: 10 }}
+        >
+          <Text>Policies</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

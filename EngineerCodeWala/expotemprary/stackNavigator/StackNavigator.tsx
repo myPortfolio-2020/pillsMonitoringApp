@@ -13,7 +13,6 @@ export type RootStackParamList = {
     sal: number;
   };
   Support: undefined;
-  Contact: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -24,7 +23,6 @@ const StackNavigator = () => {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Info" component={Info} />
       <Stack.Screen name="Support" component={Support} />
-      <Stack.Screen name="Contact" component={Contact} />
     </Stack.Navigator>
   );
 };
