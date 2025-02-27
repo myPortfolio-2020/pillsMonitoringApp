@@ -12,7 +12,7 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
-import StackNavigator from "@/stackNavigator/StackNavigator";
+
 import DrawerNavigation from "@/drawer/DrawerNavigation";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.

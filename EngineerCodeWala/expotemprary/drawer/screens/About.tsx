@@ -1,12 +1,9 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from "react-native";
+import React from "react";
+import BottomNav from "@/bottomNav/BottomNav";
 
 const About = () => {
-  return (
-    <View>
-      <Text>About</Text>
-    </View>
-  )
-}
+  return <BottomNav />;
+};
 
-export default About
+export default About;
