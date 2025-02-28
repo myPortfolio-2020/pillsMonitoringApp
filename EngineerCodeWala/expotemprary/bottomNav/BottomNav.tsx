@@ -12,6 +12,7 @@ import Search from "./bottomScreens/Serach";
 
 const Tab = createBottomTabNavigator();
 
+
 const BottomNav: React.FC<BottomTabBarProps> = (props) => {
   return (
     <Tab.Navigator

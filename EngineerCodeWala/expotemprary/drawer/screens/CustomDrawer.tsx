@@ -20,6 +20,7 @@ type DrawerParamList = {
   Policies: undefined;
 };
 
+
 const CustomDrawer: React.FC<CustomDrawerProps> = (props) => {
   const navigation = useNavigation<DrawerNavigationProp<DrawerParamList>>();
   return (

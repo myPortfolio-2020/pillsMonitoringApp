@@ -1,7 +1,12 @@
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
+import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 
-const CustomTab = ({ state, descriptors, navigation }) => {
+const CustomTab: React.FC<BottomTabBarProps> = ({
+  state,
+  descriptors,
+  navigation,
+}) => {
   return (
     <View
       style={{
@@ -11,8 +16,13 @@ const CustomTab = ({ state, descriptors, navigation }) => {
       }}
     >
       {state.routes.map((tab, index) => {
+        const { options } = descriptors[tab.key];
+        const isActive = state.index === index;
         return (
-          <TouchableOpacity onPress={() => navigation.navigate(tab.name)}>
+          <TouchableOpacity
+            key={tab.key}
+            onPress={() => navigation.navigate(tab.name)}
+          >
             <Image
               source={
                 tab.name === "Products"
@@ -26,7 +36,15 @@ const CustomTab = ({ state, descriptors, navigation }) => {
               style={{ width: 30, height: 30 }}
             />
 
-            <Text>{tab.name}</Text>
+            <Text
+              style={{
+                color: isActive
+                  ? options.tabBarActiveTintColor || "blue"
+                  : "red",
+              }}
+            >
+              {tab.name}
+            </Text>
           </TouchableOpacity>
         );
       })}
