@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
+import UseRefExample from "@/components/UseRefExample";
 
 const Products = () => {
   const [bgColor, setBgColor] = useState<string>("red");
@@ -11,6 +12,7 @@ const Products = () => {
       <TouchableOpacity onPress={() => setBgColor("green")}>
         <Text>ChangeColor</Text>
       </TouchableOpacity>
+      <UseRefExample />
     </View>
   );
 };
