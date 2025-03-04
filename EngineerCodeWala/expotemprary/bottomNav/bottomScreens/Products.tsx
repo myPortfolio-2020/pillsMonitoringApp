@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import UseRefExample from "@/components/UseRefExample";
+import UseContextHook from "@/components/UseContextHook";
 
 const Products = () => {
   const [bgColor, setBgColor] = useState<string>("red");
@@ -13,6 +14,7 @@ const Products = () => {
         <Text>ChangeColor</Text>
       </TouchableOpacity>
       <UseRefExample />
+      <UseContextHook />
     </View>
   );
 };
