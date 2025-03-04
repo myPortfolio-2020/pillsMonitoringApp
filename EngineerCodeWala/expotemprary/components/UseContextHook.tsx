@@ -1,12 +1,13 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text } from "react-native";
+import React from "react";
+import ContextHookA from "./ContextHookA";
 
 const UseContextHook = () => {
   return (
-    <View>
-      <Text>UseContextHook</Text>
+    <View>      
+      <ContextHookA/>
     </View>
-  )
-}
+  );
+};
 
-export default UseContextHook
+export default UseContextHook;
