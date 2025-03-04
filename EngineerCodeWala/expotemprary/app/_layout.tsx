@@ -14,6 +14,7 @@ import "react-native-reanimated";
 import { useColorScheme } from "@/hooks/useColorScheme";
 
 import DrawerNavigation from "@/drawer/DrawerNavigation";
+import UseContextHook from "@/components/UseContextHook";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -35,5 +36,5 @@ export default function RootLayout() {
   }
 
   // return ( <StackNavigator />);
-  return <DrawerNavigation />;
+  return <UseContextHook />;
 }
