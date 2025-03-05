@@ -15,6 +15,7 @@ import { useColorScheme } from "@/hooks/useColorScheme";
 
 import DrawerNavigation from "@/drawer/DrawerNavigation";
 import UseContextHook from "@/components/UseContextHook";
+import UseContextEx from "@/useContext/UseContextEx";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -36,5 +37,5 @@ export default function RootLayout() {
   }
 
   // return ( <StackNavigator />);
-  return <UseContextHook />;
+  return <UseContextEx />;
 }
