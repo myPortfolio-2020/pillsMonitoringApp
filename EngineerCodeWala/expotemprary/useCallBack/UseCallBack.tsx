@@ -4,13 +4,13 @@ import React, { useEffect, useState } from "react";
 const UseCallBack = () => {
   const [counter, setCounter] = useState<number>(0);
 
-  const fetchData =()=>{
-    
-  }
+  const fetchData = () => {
+    console.log("fetchData");
+  };
 
-  useEffect(()=>{
-
-  },[])
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   return (
     <View className="flex-1">
