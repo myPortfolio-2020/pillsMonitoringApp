@@ -17,6 +17,7 @@ import DrawerNavigation from "@/drawer/DrawerNavigation";
 import UseContextHook from "@/components/UseContextHook";
 import UseContextEx from "@/useContext/UseContextEx";
 import UseCallBack from "@/useCallBack/UseCallBack";
+import UseMemo from "@/useCallBack/UseMemo";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -38,5 +39,5 @@ export default function RootLayout() {
   }
 
   // return ( <StackNavigator />);
-  return <UseCallBack />;
+  return <UseMemo />;
 }
