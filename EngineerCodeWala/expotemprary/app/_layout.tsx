@@ -19,6 +19,7 @@ import UseContextEx from "@/useContext/UseContextEx";
 import UseCallBack from "@/useCallBack/UseCallBack";
 import UseMemo from "@/useCallBack/UseMemo";
 import UseMemoOrUseEffect from "@/useCallBack/UseMemoOrUseEffect";
+import NewUseCallBack from "@/useCallBack/NewUseCallBack";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -40,5 +41,5 @@ export default function RootLayout() {
   }
 
   // return ( <StackNavigator />);
-  return <UseMemoOrUseEffect />;
+  return <NewUseCallBack />;
 }
