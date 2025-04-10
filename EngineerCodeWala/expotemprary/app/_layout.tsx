@@ -20,6 +20,8 @@ import UseCallBack from "@/useCallBack/UseCallBack";
 import UseMemo from "@/useCallBack/UseMemo";
 import UseMemoOrUseEffect from "@/useCallBack/UseMemoOrUseEffect";
 import NewUseCallBack from "@/useCallBack/NewUseCallBack";
+import UseReducer from "@/useReducerHook/UseReducer";
+import AsyncStorage from "@/AsyncStorageData";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -41,5 +43,5 @@ export default function RootLayout() {
   }
 
   // return ( <StackNavigator />);
-  return <NewUseCallBack />;
+  return <AsyncStorage />;
 }
