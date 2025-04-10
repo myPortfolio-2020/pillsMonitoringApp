@@ -3,5 +3,5 @@
 
 // Notes
 //
-console.log("lect 6  revision");
+
 const express2 = require("express");
