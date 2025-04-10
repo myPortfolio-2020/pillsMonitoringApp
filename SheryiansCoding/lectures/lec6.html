@@ -19,18 +19,40 @@
     <p>npm init -y</p>
     <p>npm i express</p>
     <p>npm i ejs</p>
+    <div>------------------------------------------------</div>
     <p>
       EJS stands for Embedded JavaScript. It's a templating engine used in
       backend web development, especially with Node.js and Express.js.
     </p>
     <p>set up ejs as view engine</p>
     <p>when we use ejs</p>
+    <p>EJS is often used with the Express.js framework as a view engine</p>
+    <p>You can use EJS to create dynamic HTML email templates.</p>
+    <h1>creting ejs</h1>
+
+    <h3>app.use(express.json());</h3>
+    <h3>app.use(express.urlencoded({ extended: true }));</h3>
+    <h3>app.set("view engine", "ejs");</h3>
+    <p>
+      create a folder on root as views - and the create a file with ejs format -
+      as here as index.ejs
+    </p>
+    <p>app.get("/", (req, res) => { res.render("index.ejs"); });</p>
+    <p>how to calculate <h1>this is the ejs calculation  <!-- <%= 3+4%> --> </h1></p>
+    <div>------------------------------------------------</div>
+    <p>static and public - create folder as public and put css,js.images folder</p>
+    var path = require("path");
+    <h3>app.use(express.static(path.join(__dirname, "public")));</h3>
     <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
+    <div>------------------------------------------------</div>
+
+    <p>Dynamic routes</p>
+
+<h3>
+  app.get("/profile/:username", (req, res) => {
+    res.send(`welcome ${req.params.username}`);
+  });
+</h3>
     <p></p>
     <p></p>
     <p></p>
