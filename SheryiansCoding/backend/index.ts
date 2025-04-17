@@ -1,5 +1,6 @@
 var express = require("express");
 var path = require("path");
+var fs = require("fs");
 // import express from "express";
 
 const app = express();
@@ -11,7 +12,27 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  fs.readdir("./files", (err, allfiles) => {
+    res.render("index.ejs", { files: allfiles });
+  });
+});
+
+app.get("/files/:filename", (req, res) => {
+  fs.readFile(`./files/${req.params.filename}`, "utf-8", (err, fileData) => {
+    console.log(fileData);
+    res.render("show", {filename: req.params.filename, fileData:fileData});
+  });
+});
+
+app.post("/create", (req, res) => {
+  console.log(req.body);
+  fs.writeFile(
+    `./files/${req.body.title.split(" ").join("")}.txt`,
+    req.body.details,
+    (err) => {
+      res.redirect("/");
+    }
+  );
 });
 
 app.get("/profile/:username", (req, res) => {

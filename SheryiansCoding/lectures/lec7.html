@@ -15,11 +15,71 @@
   </head>
   <body>
     <h2>Hands-on Practice: Revisiting Key Concepts</h2>
-    <p></p>
-    <p></p>
+    <div>EJS Syntax</div>
+    <p>
+      <% if (files.length > 0) { %>
+        <p>Files found</p>
+      <% } else { %>
+        <p>No files</p>
+      <% } %>
+    </p>
+    <p>Yes — any time you open a {, you must also close it with } inside a <% %> block.</p>
 
-    <p></p>
-    <p></p>
+    <p>
+      <% if(files.length > 0) { %>
+        <div>a</div>
+        <% }else { %>
+        <div>b</div>
+        <% }%> %>
+    </p>
+    <div class="main w-full p-10">
+      <form action="/create" method="post">
+        <input
+          type="text"
+          class="block w-full border-1 mb-2 border-indigo-400"
+          name="title"
+        />
+        <textarea
+          rows="5"
+          class="block w-full border-1 border-indigo-400 mb-2"
+          name="details"
+        ></textarea>
+        <input
+          type="submit"
+          class="border-1 border-indigo-400 bg-blue-600 p-2 mb-2"
+          value="add new task"
+        />
+      </form>
+      <h1>Task list</h1>
+      <!-- <% if (files.length >= 0) { %> <% files.forEach(val => { %>
+      <div class="tasks flex gap-3">
+        <div class="task w-72 p-3 text-white rounded-md bg-zinc-900">
+          <h1>ds</h1>
+          <div>read more</div>
+        </div>
+      </div>
+      <% }); %> <% } else { %>
+      <div class="text-zinc-400 mt-4">No Task there</div>
+      <% } %> -->
+      <!-- <% if (files.length > 0) { %>
+        <% files.forEach((val) => { %>
+          <div>a</div>
+        <% }); %>
+      <% } else { %>
+        <div class="text-zinc-400 mt-4">No Task there</div>
+      <% } %> -->
+      <div class="tasks flex gap-3">
+        <% if (files.length > 0) { %> <% files.forEach((val) => { %>
+
+        <div class="task w-72 p-3 text-white rounded-md bg-zinc-900">
+          <h1><%= val %></h1>
+          <div>read more</div>
+        </div>
+        <% }); %> <% } else { %>
+        <div class="text-zinc-400 mt-4">No Task there</div>
+        <% } %>
+      </div>
+    </div>
     <p></p>
     <p></p>
   </body>
