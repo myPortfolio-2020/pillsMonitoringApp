@@ -10,8 +10,8 @@ app.get("/", (req, res) => {
 
 app.get("/create", async (req, res) => {
   const userCreated = await user.create({
-    name: "rabab",
-    userName: "Imman",
+    name: "Jamal",
+    userName: "kamal",
     email: "myEmail@ex.com",
   });
   res.send(userCreated);
@@ -27,6 +27,17 @@ app.get("/update", async (req, res) => {
   res.send(updatedUser);
 });
 
+app.get("/read", async (req, res) => {
+  const readUsers = await user.find(); // find all
+  //   const readUsers = await user.findOne({name:'Jamal'}); // find One
+  res.send(readUsers);
+});
+
+app.get("/delete", async (req, res) => {
+  //   const deleteUser = await user.findOneAndDelete({ name: "Jamal" });
+  const deleteUser = await user.find({ name: "Jamal" });
+  res.send(deleteUser);
+});
 app.listen(3000, () => {
   console.log("no error");
 });

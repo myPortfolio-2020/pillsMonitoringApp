@@ -46,8 +46,8 @@ app.get("/create", function (req, res) { return __awaiter(_this, void 0, void 0,
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, user.create({
-                    name: "rabab",
-                    userName: "Imman",
+                    name: "Jamal",
+                    userName: "kamal",
                     email: "myEmail@ex.com",
                 })];
             case 1:
@@ -65,6 +65,31 @@ app.get("/update", function (req, res) { return __awaiter(_this, void 0, void 0,
             case 1:
                 updatedUser = _a.sent();
                 res.send(updatedUser);
+                return [2 /*return*/];
+        }
+    });
+}); });
+app.get("/read", function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+    var readUsers;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, user.find()];
+            case 1:
+                readUsers = _a.sent();
+                //   const readUsers = await user.findOne({name:'Jamal'}); // find One
+                res.send(readUsers);
+                return [2 /*return*/];
+        }
+    });
+}); });
+app.get("/delete", function (req, res) { return __awaiter(_this, void 0, void 0, function () {
+    var deleteUser;
+    return __generator(this, function (_a) {
+        switch (_a.label) {
+            case 0: return [4 /*yield*/, user.find({ name: "Jamal" })];
+            case 1:
+                deleteUser = _a.sent();
+                res.send(deleteUser);
                 return [2 /*return*/];
         }
     });
