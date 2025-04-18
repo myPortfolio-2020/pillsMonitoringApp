@@ -52,3 +52,8 @@ app.get("/profile/:username/:company", (req, res) => {
 app.listen(3000, (err) => {
   console.log("Running");
 });
+
+
+app.get('/create', (req,res)=>{
+  
+})

@@ -14,13 +14,29 @@
     </style>
   </head>
   <body>
-    <h2></h2>
+    <h2>Ayn and syn</h2>
     <p></p>
-    <p></p>
+    <p>
+      async function D() { console.log("Start of D");
+       await new Promise(resolve      => setTimeout(resolve, 1000));
+        // wait 1 second console.log("End of D"); }
+      D(); console.log("Outside D");
+    </p>
 
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
+    <p>Start of D</p>
+    <p>Outside D</p>
+    <p>End of D</p>
+    <p>----------------------------------------</p>
+    <p>
+      async function D() { console.log("Start of a"); await new Promise(resolve
+      => setTimeout(resolve, 1000)); // wait 1 second console.log("End of b
+      after wait"); } let synFn = ()=>{ console.log('another') } D(); synFn()
+      console.log("Outside c");
+    </p>
+
+    <p>Start of a</p>
+    <p>another</p>
+    <p>Outside c</p>
+    <p>End of b after wait</p>
   </body>
 </html>
