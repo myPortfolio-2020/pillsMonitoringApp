@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="stylesheets/style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <h2>List of users</h2>
+    <div><a href="/">Back to Home</a></div>
+    <div class="flex flex-wrap gap-3 text-blue-300">
+      <% if (users.length > 0) { %> <% users.forEach((user) => { %>
+      <div class="w-72 bg-blue-900 p-4 m-2 rounded-2xl">
+        <div><img src="<%= user.image %>" /></div>
+        <div><%= user.ename %></div>
+        <div><%= user.email %></div>
+        <div class="flex justify-between">
+          <div><a href="/editUser/<%= user._id %>">Update</a></div>
+          <div><a href="/delete/<%= user._id %>">Delete</a></div>
+        </div>
+      </div>
+      <% }) %> <% } else { %>
+      <div>No users</div>
+      <% } %>
+    </div>
+  </body>
+</html>
