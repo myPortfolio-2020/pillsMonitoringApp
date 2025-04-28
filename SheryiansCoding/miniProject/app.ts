@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cookieParser());
 
+// setup a middleware
+
 app.get("/", (req, res) => {
   res.render("index");
 });
@@ -47,11 +49,33 @@ app.post("/login", async (req, res) => {
   let user = await userModel.findOne({ email });
   if (!user) return res.status(500).send("Something went wrong");
 
-  bcrypt.compare(password, user.password, (err, result)=>{
-    if(result) res.status(200).send('you can Login')
-        else res.redirect('/login')
-  })
+  bcrypt.compare(password, user.password, (err, result) => {
+    if (result) {
+      let token = jwt.sign({ email: email, userid: user._id }, "secretKey");
+      res.cookie("token", token);
+      res.status(200).send("you can Login");
+    } else res.redirect("/login");
+  });
 });
+
+app.get("/profile", isLogedIn, (req, res) => {
+  console.log(req.user);
+  res.render("/login");
+});
+
+app.get("/logout", (req, res) => {
+  res.cookie("token", "");
+  res.redirect("/login");
+});
+
+function isLogedIn(req, res, next) {
+  if (req.cookies.token === "") res.send("you must be login");
+  else {
+    let data = jwt.verify(req.cookie.token === "secretKey");
+    req.user(data);
+  }
+  next();
+}
 
 app.listen(3000, () => {
   console.log("Running!!!");

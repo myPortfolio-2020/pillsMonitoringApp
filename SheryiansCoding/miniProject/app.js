@@ -47,6 +47,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(cookieParser());
+// setup a middleware
 app.get("/", function (req, res) {
     res.render("index");
 });
@@ -104,15 +105,35 @@ app.post("/login", function (req, res) { return __awaiter(_this, void 0, void 0,
                 if (!user)
                     return [2 /*return*/, res.status(500).send("Something went wrong")];
                 bcrypt.compare(password, user.password, function (err, result) {
-                    if (result)
-                        res.status(200).send('you can Login');
+                    if (result) {
+                        var token = jwt.sign({ email: email, userid: user._id }, "secretKey");
+                        res.cookie("token", token);
+                        res.status(200).send("you can Login");
+                    }
                     else
-                        res.redirect('/login');
+                        res.redirect("/login");
                 });
                 return [2 /*return*/];
         }
     });
 }); });
+app.get("/profile", isLogedIn, function (req, res) {
+    console.log(req.user);
+    res.render("/login");
+});
+app.get("/logout", function (req, res) {
+    res.cookie("token", "");
+    res.redirect("/login");
+});
+function isLogedIn(req, res, next) {
+    if (req.cookies.token === "")
+        res.send("you must be login");
+    else {
+        var data = jwt.verify(req.cookie.token === "secretKey");
+        req.user(data);
+    }
+    next();
+}
 app.listen(3000, function () {
     console.log("Running!!!");
 });
