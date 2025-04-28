@@ -24,7 +24,7 @@ app.get("/login", (req, res) => {
 
 app.get("/profile", isLoggedIn, (req, res) => {
   console.log(req.user);
-  res.send("profile");
+  res.send("you can access profile");
 });
 
 app.post("/register", async (req, res) => {

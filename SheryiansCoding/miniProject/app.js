@@ -56,7 +56,7 @@ app.get("/login", function (req, res) {
 });
 app.get("/profile", isLoggedIn, function (req, res) {
     console.log(req.user);
-    res.send("profile");
+    res.send("you can access profile");
 });
 app.post("/register", function (req, res) { return __awaiter(_this, void 0, void 0, function () {
     var _a, name, email, password, userName, age, user;
