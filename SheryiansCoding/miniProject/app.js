@@ -54,6 +54,10 @@ app.get("/", function (req, res) {
 app.get("/login", function (req, res) {
     res.render("login");
 });
+app.get("/profile", isLoggedIn, function (req, res) {
+    console.log(req.user);
+    res.send("profile");
+});
 app.post("/register", function (req, res) { return __awaiter(_this, void 0, void 0, function () {
     var _a, name, email, password, userName, age, user;
     var _this = this;
@@ -117,20 +121,16 @@ app.post("/login", function (req, res) { return __awaiter(_this, void 0, void 0,
         }
     });
 }); });
-app.get("/profile", isLogedIn, function (req, res) {
-    console.log(req.user);
-    res.render("/login");
-});
 app.get("/logout", function (req, res) {
     res.cookie("token", "");
     res.redirect("/login");
 });
-function isLogedIn(req, res, next) {
+function isLoggedIn(req, res, next) {
     if (req.cookies.token === "")
         res.send("you must be login");
     else {
-        var data = jwt.verify(req.cookie.token === "secretKey");
-        req.user(data);
+        var data = jwt.verify(req.cookies.token, "secretKey");
+        req.user = data;
     }
     next();
 }

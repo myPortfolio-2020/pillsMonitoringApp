@@ -22,6 +22,11 @@ app.get("/login", (req, res) => {
   res.render("login");
 });
 
+app.get("/profile", isLoggedIn, (req, res) => {
+  console.log(req.user);
+  res.send("profile");
+});
+
 app.post("/register", async (req, res) => {
   let { name, email, password, userName, age } = req.body;
   let user = await userModel.findOne({ email });
@@ -58,21 +63,16 @@ app.post("/login", async (req, res) => {
   });
 });
 
-app.get("/profile", isLogedIn, (req, res) => {
-  console.log(req.user);
-  res.render("/login");
-});
-
 app.get("/logout", (req, res) => {
   res.cookie("token", "");
   res.redirect("/login");
 });
 
-function isLogedIn(req, res, next) {
+function isLoggedIn(req, res, next) {
   if (req.cookies.token === "") res.send("you must be login");
   else {
-    let data = jwt.verify(req.cookie.token === "secretKey");
-    req.user(data);
+    let data = jwt.verify(req.cookies.token, "secretKey");
+    req.user = data;
   }
   next();
 }
