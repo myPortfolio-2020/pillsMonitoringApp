@@ -11,15 +11,21 @@ for (let i = 1; i <= 10; i++) {
 
 // const userNum = Number(prompt("enter user number"));
 
-for (let i = 1; i < 50; i++) {
+for (let i = 1; i < 10; i++) {
   if (i === 15) break;  // gives result 1 to 15 break after 14
   else console.log(i);
 }
 
-for (let i = 1; i < 50; i++) {
+for (let i = 1; i < 5; i++) {
     if (i === 15) continue;  // leave 15
     else console.log(i);
   }
   
+
+  let ans = prompt('do write anything and till you write exit')
+
+  while(ans !== 'exit'){
+    ans = prompt('do write anything and till you write exit')
+   }
 
   
