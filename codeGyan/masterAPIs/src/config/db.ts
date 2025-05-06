@@ -3,8 +3,6 @@ import { config } from "./config";
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(config.dataBaseUrl as string);
-
     mongoose.connection.on("connected", () => {
       console.log("database is connected successfully");
     });
@@ -15,6 +13,10 @@ const connectDB = async () => {
         "This is the error that found after initial connection"
       );
     });
+
+    // always after connect.on lines
+    await mongoose.connect(config.dataBaseUrl as string);
+
   } catch (error) {
     console.log(`DB is not connected successfully`, error);
     process.exit(1);
