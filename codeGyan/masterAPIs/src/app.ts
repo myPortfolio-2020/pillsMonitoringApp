@@ -1,6 +1,9 @@
+// we setting up express setup only
+
 import express, { Request, Response } from "express";
 
 import globalErrorHandlers from "./middlewares/globalHnadlersErrors";
+import userRouter from "./user/userRouter";
 
 const app = express();
 
@@ -10,6 +13,10 @@ const app = express();
 app.get("/", (req: Request, res: Response) => {
   res.json({ message: "this is the message" });
 });
+
+
+// register userRouter
+app.use('/api/users', userRouter)
 
 // Global error Handlers
 // should be placed in the end
