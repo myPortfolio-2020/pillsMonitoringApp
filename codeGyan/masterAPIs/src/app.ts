@@ -7,6 +7,12 @@ import userRouter from "./user/userRouter";
 
 const app = express();
 
+// Middleware to parse JSON request bodies
+app.use(express.json());
+
+// Middleware to parse URL-encoded request bodies
+// app.use(express.urlencoded({ extended: true }));
+
 // routes
 // http methods:  GET, POST, PUT, PATCH, DELETE, etc
 
@@ -14,9 +20,8 @@ app.get("/", (req: Request, res: Response) => {
   res.json({ message: "this is the message" });
 });
 
-
 // register userRouter
-app.use('/api/users', userRouter)
+app.use("/api/users", userRouter);
 
 // Global error Handlers
 // should be placed in the end
