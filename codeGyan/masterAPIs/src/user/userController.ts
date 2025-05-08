@@ -4,6 +4,8 @@ import { NextFunction, Request, Response } from "express";
 import createHttpError from "http-errors";
 import userModel from "./userModel";
 import bcrypt from "bcrypt";
+import { sign } from "jsonwebtoken";
+import { config } from "../config/config";
 
 const createUser = async (req: Request, res: Response, next: NextFunction) => {
   // three things
@@ -32,10 +34,13 @@ const createUser = async (req: Request, res: Response, next: NextFunction) => {
     email,
     password: hashedPassword,
   });
+
+  // token Generation - jwt
+  const token = sign({sub:newUser._id}, config.jwtSecret as string, {expiresIn:"7d"})
   // process
   // response
 
-  res.json({ _id: newUser._id });
+  res.json({ accessToken: token });
 };
 
 export { createUser };
