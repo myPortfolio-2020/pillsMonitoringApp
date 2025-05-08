@@ -3,6 +3,7 @@ import { IUser } from "./userTypes";
 
 const userSchema = new mongoose.Schema<IUser>(
   {
+
     name: {
       type: String,
       required: true,
