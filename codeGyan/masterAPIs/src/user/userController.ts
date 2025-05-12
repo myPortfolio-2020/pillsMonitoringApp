@@ -66,10 +66,20 @@ const createUser = async (req: Request, res: Response, next: NextFunction) => {
 // create login account
 
 const loginUser = async (req: Request, res: Response, next: NextFunction) => {
+  const { email, password } = req.body;
+  if (!email || !password) {
+    return next(createHttpError(400, "email or password is missing"));
+  }
+
+  const user = await userModel.findOne({email})
+
+  if(!user){
+    return next(createHttpError(404, 'user Not Found'))
+  }
+
   res.json({
     message: "ok",
   });
-
 };
 
 export { createUser, loginUser };
