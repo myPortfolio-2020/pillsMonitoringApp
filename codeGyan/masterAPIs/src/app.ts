@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 
 // Middleware to parse URL-encoded request bodies
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 // routes
 // http methods:  GET, POST, PUT, PATCH, DELETE, etc
