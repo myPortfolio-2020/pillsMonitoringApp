@@ -5,5 +5,3 @@ const createBook = async (
   res: Response,
   next: NextFunction
 ) => {};
-
-export { createBook };
