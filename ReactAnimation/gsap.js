@@ -57,3 +57,42 @@ tl.to(".boxThree", {
   stagger: 0.3,
   //   repeat:1, two times
 });
+
+gsap.from("#page1 #pgBox", {
+  duration: 2,
+  rotate: 360,
+  stagger: 0.6,
+  scale: 0.2,
+});
+
+gsap.from("#page2 #pgBox", {
+  duration: 2,
+  rotate: 360,
+  stagger: 0.6,
+  scale: 0.2,
+  //   scrollTrigger: "#page2 #pgBox",
+  scrollTrigger: {
+    trigger: "#page2 #pgBox",
+    scroller: "body",
+    markers: true,
+    start: "top 55%",
+    end: "top 30%",
+    scrub: 5, // value 1-5 or true if 5 more smooth
+  },
+});
+
+gsap.from("#page3 #pgBox", {
+  duration: 2,
+  rotate: 360,
+  stagger: 0.6,
+  scale: 0.2,
+  //   scrollTrigger: "#page2 #pgBox",
+  scrollTrigger: {
+    trigger: "#page3 #pgBox",
+    scroller: "body",
+    markers: true,
+    start: "top 55%",
+    end: "top 30%",
+    scrub: 5, // value 1-5 or true if 5 more smooth
+  },
+});

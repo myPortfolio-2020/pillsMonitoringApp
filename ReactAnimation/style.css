@@ -71,3 +71,31 @@ h1 {
 .boxThree {
   background-color: #310639;
 }
+
+#page1,
+#page2,
+#page3 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page1 {
+  background-color: #1d55f0;
+}
+
+#page2 {
+  background-color: #1bd195;
+}
+
+#page3 {
+  background-color: #edce23;
+}
+
+#pgBox {
+  width: 250px;
+  height: 250px;
+  background-color: #02123e;
+  border-radius: 17px;
+}
