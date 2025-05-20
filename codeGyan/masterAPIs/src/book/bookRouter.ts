@@ -17,7 +17,7 @@ const upload = multer({
 });
 
 bookRouter.post(
-  "/books",
+  "/",
   upload.fields([
     { name: "coverImage", maxCount: 1 }, //coverImage is given in our model
     { name: "file", maxCount: 1 }, // file is given in our model
