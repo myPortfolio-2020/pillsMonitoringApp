@@ -1,5 +1,5 @@
 import path from "node:path";
-import { Request, Response } from "express";
+import { raw, Request, Response } from "express";
 import cloudinary from "../config/cloudinary";
 
 const createBook = async (req: Request, res: Response) => {
@@ -19,6 +19,31 @@ const createBook = async (req: Request, res: Response) => {
     folder: "book-covers",
     format: coverImageMimeType,
   });
+
+  const bookFileName = files.file[0].filename;
+  const bookFilePath = path.resolve(
+    __dirname,
+    "../../public/data/uploads",
+    bookFileName
+  );
+
+  // resource_type: 'raw' is for pdf file but not for image
+
+  try {
+    const bookFileUploadResult = await cloudinary.uploader.upload(
+      bookFilePath,
+      {
+        resource_type: "raw",
+        filename_override: bookFileName,
+        folder: "book-pdfs",
+        format: "pdf",
+        // format: coverImageMimeType,
+      }
+    );
+    console.log("bookFileUploadResult", bookFileUploadResult);
+  } catch (err) {
+    console.log(err);
+  }
 
   console.log("uploadResult:", uploadResult);
   res.json({});
