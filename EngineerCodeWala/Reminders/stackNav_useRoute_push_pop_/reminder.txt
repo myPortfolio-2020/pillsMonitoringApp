@@ -1,0 +1,36 @@
+push always create a new instance
+____________________________________________________
+Replace()
+
+remember his login to home screen example, instead of navigate use replace()
+
+why, it does not give an option to go back
+____________________________________________________________________
+
+
+customButton
+
+import { View, Text, TouchableOpacity } from "react-native";
+import React from "react";
+
+interface CustButton {
+  title: string;
+  onPress: ()=>void;
+}
+
+const CustButton: React.FC<CustButton> = ({ title, onPress }) => {
+  return (
+    <TouchableOpacity onPress={onPress}>
+      <Text>{title}</Text>
+    </TouchableOpacity>
+  );
+};
+
+export default CustButton;
+
+
+
+ <CustButton
+        title={"gogback"}
+        onPress={() => navigation.navigate("Support")}
+      />

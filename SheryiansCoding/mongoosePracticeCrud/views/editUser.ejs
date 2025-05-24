@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="stylesheets/style.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <h2>update user</h2>
+    <div class="mb-4"><a href="/">go back</a></div>
+    <form action="/update/<%=editUser._id %>" method="post">
+      <input
+        type="text"
+        name="ename"
+        placeholder=""
+        class="border"
+        value="<%= editUser.ename %>"
+      />
+      <input
+        type="text"
+        name="email"
+        placeholder=""
+        class="border"
+        value="<%= editUser.email %>"
+      />
+      <input
+        type="text"
+        name="image"
+        placeholder=""
+        class="border"
+        value="<%= editUser.image %>"
+      />
+      <input
+        type="submit"
+        class="bg-yellow-500 p-1 text-white"
+        value="Edit user"
+      />
+    </form>
+  </body>
+</html>

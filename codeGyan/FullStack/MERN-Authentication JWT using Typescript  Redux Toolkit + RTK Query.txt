@@ -1,2 +1,0 @@
-MERN Authentication JWT using Typescript | Redux Toolkit + RTK Query
-https://www.youtube.com/watch?v=a9NRFuMKV4o

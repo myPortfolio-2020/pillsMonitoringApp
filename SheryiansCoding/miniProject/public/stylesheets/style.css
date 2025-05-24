@@ -1,0 +1,27 @@
+body,
+html,
+div,
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
+.outer {
+  max-width: 991px;
+  margin: 40px auto;
+}
+.outer input {
+  margin-top: 4px;
+  border: 1px solid #a6bae3;
+  min-width: 266px;
+  padding: 7px;
+  border-radius: 3px;
+}
+.outer h2 {
+  font-size: 29px;
+  padding-bottom: 11px;
+}

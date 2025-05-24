@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .outer {
+        max-width: 991px;
+        margin: 44px auto;
+      }
+      .resize {
+        resize: both;
+        padding: 44px;
+        background-color: aliceblue;
+      }
+      .yes-resize {
+        width: 300px;
+        height: 150px;
+        overflow: auto;
+        resize: both;
+        border: 1px solid #ccc;
+      }
+      .clamp {
+        font-size: clamp(2rem, 2.5vw, 2rem);
+      }
+      .clampDiv {
+        width: clamp(10vw, 20em, 100vw);
+        /* width: clamp(min(10vw, 20rem), 300px, max(90vw, 55rem)); */
+        background-color: #fee7e7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <h2>https://developer.mozilla.org/en-US/docs/Web/CSS/:not</h2>
+      <div class="resize">
+        <textarea>Type some text here.</textarea>
+        <div class="yes-resize">asdad</div>
+      </div>
+      <div class="clamp">I am Rabab</div>
+      <div class="clampDiv">I am Rabab</div>
+    </div>
+  </body>
+</html>

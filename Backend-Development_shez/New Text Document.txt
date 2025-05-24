@@ -1,0 +1,8 @@
+Learn Backend Development in 4 Hours
+
+https://www.youtube.com/watch?v=Q-icS7yZz5k
+
+____________________________________________________________________________
+
+Advanced MERN Authentication: Email Verification, OTP, Forget Reset- All You Need!
+https://www.youtube.com/watch?v=UIT2wuq7heo&t=17s

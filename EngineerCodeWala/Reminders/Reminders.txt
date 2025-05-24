@@ -1,0 +1,184 @@
+EngineerCodewala
+
+
+// lecture 7
+// event.nativeEvent.layout - tells all about <view>, with, height, position
+
+    <View>
+      <View
+        style={styles.box}
+        onLayout={(event) => {
+          console.log("width", event.nativeEvent.layout);
+        }}
+      >
+        <Text>Reminders</Text>
+      </View>
+    </View>
+
+___________________________________________________________________
+
+<Text numberOfLines={2}>
+
+loremsdkjfk
+loremmm...
+
+
+<Text numberOfLines={2} ellipsizeMode="tail">
+___________________________________________________________________
+
+<TextInput style={styles.borderLine} secureTextEntry={true}></TextInput>
+___________________________________________________________________
+  const [nm, setNm]=useState('')
+<TextInput
+        style={styles.borderLine}
+        secureTextEntry={true}
+        numberOfLines={2}
+        multiline={true}
+        onChangeText={(text) => {
+          setNm(text);
+        }}
+      ></TextInput>
+      <Text>{nm}</Text>
+
+___________________________________________________________________
+
+      <TouchableOpacity style={styles.borderLine} activeOpacity={0}>
+        <Text>try Click!</Text>
+      </TouchableOpacity>
+
+mostly preferable touchAbleOpacity than Button b/c TouchAbleOpacity can be modified as much as you want
+___________________________________________________________________
+
+// FlatList
+
+      <FlatList
+        data={["a", "b", "c", "d", "e"]}
+        renderItem={({ item, index }) => {
+          return (
+            <View>
+              <Text style={style.myList}>{`items-${item} ${index + 1}`}</Text>
+            </View>
+          );
+        }}
+      />
+
+// sectionList -  allow to give categories of listing as title
+___________________________________________________________________
+
+ when data is coming from screen A to B
+
+screen A
+  const navigation = useNavigation();
+  <TouchableOpacity
+        onPress={() =>
+          navigation.navigate("ScreenA", {
+            user: {
+              nm: "Ahmed",
+              sal: 2000,
+            },
+          })
+        }
+      >
+        <Text>Go TO screen A</Text>
+      </TouchableOpacity>
+
+Screen B
+const route = useRoute();
+ <Text>
+     This is coming from Route -
+     {`${route.params.user.nm} and sal is ${route.params.user.sal}`}
+</Text>
+___________________________________________________________________
+
+navigate() and push()
+
+navigate() does not create a new instance but push() create a new instance
+(remember his screen moving thing from left to right )
+___________________________________________________________________
+
+Replace()
+
+remember his login to home screen example, instead of navigate use replace()
+
+why, it does not give an option to go back
+___________________________________________________________________
+
+pop()
+
+if A to B to C to D
+
+and on D, need to go directly A use pop(3)
+
+___________________________________________________________________
+
+customHeader
+   <Stack.Screen
+        name="ScreenA"
+        component={ScreenA}
+        options={{ headerShown: true, headerStyle:{backgroundColor:'green'} }}
+        
+      />
+
+------------------------------------------------------------------------------
+// lecture 8
+
+------------------------------------------------------------------------------
+// lecture 9
+React Navigation Stack Navigator Explained
+
+export type RootStackParamList = {
+  Home: undefined;
+  About: undefined;
+  Help: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
+
+ <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="About" component={About} />
+      <Stack.Screen name="Help" component={Help} />
+    </Stack.Navigator>
+
+
+Home.tsx
+interface HomeScreenProps {
+  navigation: StackNavigationProp<RootStackParamList, "Home">;
+}
+const Home = ({ navigation }: HomeScreenProps) => {
+  return (
+    <View className="flex-1">
+      <View className=" flex justify-items-center ">
+        <TouchableOpacity onPress={() => navigation.navigate("About")}>
+          <Text>About</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Help")}>
+          <Text>Help</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
+____________________________________________________________________
+
+
+
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------

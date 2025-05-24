@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .outer {
+        max-width: 991px;
+        margin: 44px auto;
+      }
+      .w100 {
+        width: 100%;
+        max-width: 991px;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .w100 table {
+        width: 100%;
+      }
+      .w100 table thead tr th,
+      .w100 table tbody tr td {
+        width: 50%;
+        text-align: left;
+        border: 1px solid #ddd;
+        padding: 9px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="./p3.js"></script>
+    <div class="outer">
+      <!-- for Pattern -->
+      <h4>for Pattern</h4>
+      <div>for(start, end, change){}</div>
+      <div class="w100">
+        <table>
+          <thead>
+            <tr>
+              <th>FOR</th>
+              <th>WHILE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Best when the number of iterations is known in advance</td>
+              <td>Best when the number of iterations is unknown</td>
+            </tr>
+            <tr>
+              <td>for (let i = 0; i < 5; i++) { ... }</td>
+              <td>let i = 0; while (i < 5) { ... i++; }</td>
+            </tr>
+            <tr>
+              <td>a</td>
+              <td>aa</td>
+            </tr>
+            <tr>
+              <td>a</td>
+              <td>aa</td>
+            </tr>
+            <tr>
+              <td>a</td>
+              <td>aa</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

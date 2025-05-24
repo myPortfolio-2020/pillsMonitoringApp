@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="outer">
+      <div><a href="/login">Login</a></div>
+      <h2>Create Account</h2>
+      <div>
+        <form action="/register" method="post">
+          <div><input type="text" name="name" placeholder="Enter name" /></div>
+          <div>
+            <input type="text" name="userName" placeholder="Enter userName" />
+          </div>
+          <div><input type="text" name="email" placeholder="email" /></div>
+          <div><input type="number" name="age" placeholder="age" /></div>
+          <div>
+            <input type="password" name="password" placeholder="" />
+          </div>
+          <div>
+            <input
+              type="submit"
+              value="Create Account"
+              class="p-3 bg-blue-600 text-white rounded-sm"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

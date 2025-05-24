@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "chacha": "echo '\u001b[32mHello, this is a green message!\u001b[0m' && node ts.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "cookie-parser": "^1.4.7",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

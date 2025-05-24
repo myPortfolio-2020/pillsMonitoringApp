@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend Development</title>
+    <style>
+      body {
+        background-color: rgb(225, 234, 163);
+      }
+      p {
+        font-size: 21px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>index.ejs</h1>
+    <h1>EJS working - simple as <%= 2+2%></h1>
+    <form action="/create" method="post">
+      <input type="text" name="title" />
+      <textarea name="detail"></textarea>
+      <input type="submit" />
+    </form>
+    <h1>tasks</h1>
+    <% if(file.length > 0) {%>
+    <div class="flex gap-5">
+      <% file.forEach((val) =>{ %>
+      <div class="bw">
+        <h2><%= val %></h2>
+        <div>
+          <a href="./files/<%= val %>">read more </a>
+
+          <a href="./edit/<%= val %>">Edit</a>
+        </div>
+      </div>
+      <%}) %>
+    </div>
+    <% } else {%>
+    <div>No Task exist</div>
+    <% } %>
+    <div>----------------------------</div>
+    <h2>Edit.ejs</h2>
+    <a href="/">Go Back to Home</a>
+    <h2>Edit Page</h2>
+    <form action="/edit" method="post">
+      <input type="text" name="Previous" value="<%= filename %>" />
+      <input type="text" placeholder="New Name" name="newNm" />
+      <input type="submit" value="update file name" />
+    </form>
+    <div>-------------------------------</div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/">Go Back to Home</a>
+    <h2>Edit Page</h2>
+    <form action="/edit" method="post">
+      <input type="text" name="Previous" value="<%= filename %>" />
+      <input type="text" placeholder="New Name" name="newNm" />
+      <input type="submit" value="update file name" />
+    </form>
+  </body>
+</html>
