@@ -175,7 +175,11 @@
           <td>
             <div></div>
             <div></div>
-            <div></div>
+            <div>
+              function doesThisWorksInFunction() { let user = "Jim";
+              console.log(this.user); } doesThisWorksInFunction(); // undefined
+              - why, THIS works with object context
+            </div>
           </td>
         </tr>
         <tr>
