@@ -13,6 +13,7 @@
       table tr th,
       td {
         border: 1px solid #ddd;
+        margin: 11px 0;
       }
       td:first-child {
         background-color: rgb(171, 192, 184);
@@ -26,6 +27,10 @@
         font-weight: 500;
         padding: 4px 11px;
       }
+
+      .focus {
+        color: blue;
+      }
     </style>
   </head>
   <body>
@@ -33,15 +38,18 @@
       <tbody>
         <tr>
           <td>01</td>
+          <td width="290"></td>
           <td></td>
         </tr>
         <tr>
           <td>05</td>
           <td>Datatypes and ECMA standards</td>
+          <td></td>
         </tr>
         <tr>
           <td>06</td>
           <td>Datatype conversion confusion</td>
+          <td></td>
         </tr>
         <tr>
           <td>07</td>
@@ -49,51 +57,387 @@
             <div>Why string to number conversion is confusing</div>
             <div>- chatGPT try conversion ex, and pre and postfix a++, ++a</div>
           </td>
+          <td></td>
         </tr>
         <tr>
           <td>08</td>
           <td>Comparison of datatypes in javascript</td>
+          <td></td>
         </tr>
         <tr>
           <td>09</td>
           <td>Data types of javascript summary</td>
+          <td></td>
         </tr>
         <tr>
           <td>10</td>
           <td>Stack and Heap memory</td>
+          <td></td>
         </tr>
         <tr>
           <td>11</td>
           <td>Strings in Javascript</td>
+          <td></td>
         </tr>
         <tr>
           <td>12</td>
+          <td></td>
           <td></td>
         </tr>
         <tr>
           <td>13</td>
           <td></td>
+          <td></td>
         </tr>
         <tr>
           <td>14</td>
           <td>Array in Javascript</td>
+          <td></td>
         </tr>
         <tr>
           <td>15</td>
           <td>Array part 2</td>
+          <td></td>
         </tr>
 
         <tr>
           <td>16</td>
           <td>Objects in depth</td>
+          <td></td>
         </tr>
         <tr>
           <td>17</td>
-          <td></td>
+          <td>Objects in Javascript part 2</td>
+          <td style="font-size: 14px">
+            <div>mering object as 1 - {{}, ...ayy, ...bee }</div>
+            <div>
+              Object.assign({}, obj1,obj2,.....)
+              <span class="focus"
+                >without giving {} all will merge into obj1</span
+              >
+            </div>
+            <div>
+              thats why 90% we use
+              <span class="focus">{ ...obj1, ...obj2 }</span>
+            </div>
+            <div>Object.keys(shop1)</div>
+            <div>Object.entries(shop1)</div>
+            <div>Object.values(shop1)</div>
+            <div class="focus">
+              it convert output into array, so you can use map() on them
+            </div>
+            <div>shop1.hasOwnProperty("items")</div>
+          </td>
         </tr>
         <tr>
           <td>18</td>
+          <td>Object de-structure and JSON API intro</td>
           <td></td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>Functions and parameter</td>
+          <td>abc() where abc is the referance and () is the execution</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>Functions with objects and array</td>
+          <td>
+            rest operator, passing array and object as a function parameters
+          </td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>Global and local scope</td>
+          <td>
+            <div>global scopes are different when</div>
+            <div>1 - you see in browser console</div>
+            <div>2 - you run as node file.js</div>
+          </td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>Scope level and mini hoisting</td>
+          <td>
+            <div>
+              how scope works, see functions and inside functions variable
+            </div>
+            <div>example with functions and if condition</div>
+            <div>
+              which type of functions can execute even define above the
+              declaration
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>THIS and arrow function</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>a</td>
+          <td>a</td>
+          <td>
+            <div></div>
+            <div></div>
+            <div></div>
+          </td>
         </tr>
       </tbody>
     </table>
