@@ -1,6 +1,7 @@
 const user = {
   userName: "Tim",
   comp: "remote",
+  // Notice we are using regular function not arrow function
   fn: function () {
     console.log(this.userName); // we use THIS keyword when we use current context
     console.log("this inside fn:", this); // { userName: 'Kim', comp: 'remote', fn: [Function: fn] }
@@ -15,7 +16,7 @@ console.log(this); // {} in node console
 function chai() {
   console.log(this);
 }
-chai();
+chai(); // gives you ??
 
 function doesThisWorksInFunction() {
   let user = "Jim";
