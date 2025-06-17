@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function FetchData() {
   const [counter, setCounter] = useState(0);
@@ -6,6 +6,12 @@ function FetchData() {
   const updateCounter = (delta) => {
     setCounter(counter + delta);
   };
+
+  useEffect(() => {
+    console.log("inside useEffect");
+    document.title = counter;
+  }, [counter]);
+
   return (
     <>
       <div>counter: {counter}</div>
