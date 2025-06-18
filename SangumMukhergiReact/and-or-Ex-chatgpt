@@ -1,0 +1,87 @@
+// Task: Print "Eligible to vote" if the person is at least 18 and is a citizen.
+let age = 20;
+let isCitizen = true;
+
+if (age >= 18 && isCitizen) {
+  console.log("Eligible to vote");
+}
+
+// Task: Print "Login successful" if username is "admin" and password is "1234".
+// Given:
+let username = "admin";
+let password = "1234";
+
+if (username === "admin" && password === "1234") {
+  console.log("Login successful");
+}
+
+// Task: Print "Discount applied" if the user is a member or has a coupon.
+// Given:
+let isMember = false;
+let hasCoupon = true;
+if (isMember || hasCoupon) {
+  console.log("Discount applied");
+}
+
+// Task: Print "Temperature is normal" if the temp is between 20 and 30 (inclusive).
+// Given:
+let temp = 25;
+
+if (temp >= 20 && temp <= 30) {
+  console.log("Temperature is normal");
+}
+
+// Task: Show content if the user is logged in or an admin.
+// Given:
+let isLoggedIn = false;
+let isAdmin = true;
+console.log(isLoggedIn || isAdmin);
+
+// Task: Print `hasName`. Explain why this works.
+// Given:
+let name = "";
+let hasName = name || "Anonymous";
+
+console.log(
+  `${hasName} - because when there is no vlaue it assumes it as a false and then it goes to the next which is Anonymous`
+); // Anonymous
+
+// Task: Print "Access granted" if userNm is "admin", passWord is "1234", and user is NOT blocked.
+// Given:
+let userNm = "admin";
+let passWord = "1234";
+let isBlocked = false;
+
+if (userNm === "admin" && passWord === "1234" && !isBlocked) {
+  console.log("Access granted");
+}
+
+// Task: Print "Input required" if input is falsy (empty string, null, undefined, etc).
+// Given:
+let input = "";
+
+if (input) {
+  console.log("Input required");
+}
+console.log(input);
+
+// Given:
+let hour = 18;
+
+// Task: Print "Good morning" if hour < 12,
+// "Good afternoon" if hour is between 12 and 17,
+// and "Good evening" if hour is 18 or more.
+
+if (hour <= 12) {
+  console.log("Good morning");
+}
+
+// Task: Allow entry if it's the weekend OR (if it's a student AND they have an ID).
+// Given:
+let isStudent = true;
+let hasID = false;
+let isWeekend = true;
+
+if ((isStudent && hasID) || isWeekend) {
+  console.log("Entry allowed");
+}
