@@ -1,18 +1,5 @@
-//&& AND - || OR - Operators
+// Task: Print "Eligible to vote" if the person is at least 18 and is a citizen.
+let age = 20;
+let isCitizen = true;
 
-let a = true; // check first value
-let b = true; // then second
-// first was true so go to next
-console.log(a && b); //true
-
-let c = true; // first is true so go to next
-let d = false;
-console.log(c && d); // false
-
-let e = false; // first is false so do not go farther
-let f = true;
-console.log(e && f); // false
-
-let g = false;
-let h = false;
-console.log(g && h); // false
+console.log(age > 18 )
