@@ -55,11 +55,18 @@
       </div>
     </div>
     <div class="hook">
-      <h2>Hook -</h2>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <h2>Hook - useLayoutEffect</h2>
+      <div>Purpose of useLayoutEffect</div>
+      <div>1 - Measure DOM elements (like width, height, or position)</div>
+      <div>2 - Perform updates that must happen before the browser paints.</div>
+      <div>
+        3 - Avoid visual glitches or flickering caused by asynchronous updates.
+      </div>
+      <div class="shCut">
+        Don't overuse useLayoutEffect, especially for non-visual tasks — it can
+        block rendering and hurt performance. If you're not doing layout-related
+        work, prefer useEffect
+      </div>
       <div></div>
     </div>
     <div class="hook">
