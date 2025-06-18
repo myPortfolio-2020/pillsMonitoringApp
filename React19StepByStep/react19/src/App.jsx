@@ -1,5 +1,5 @@
 import "./App.css";
-import FetchData from "./HooksByWDM/useEffect/FetchData";
+import FetchData from "./HooksByWDM/useEffect/Counter";
 // import Counter from "./HooksByWDM/useState/Counter";
 
 function App() {

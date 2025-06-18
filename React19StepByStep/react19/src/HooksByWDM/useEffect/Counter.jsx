@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-function FetchData() {
+function Counter() {
   const [counter, setCounter] = useState(0);
 
   const updateCounter = (delta) => {
-    setCounter(counter + delta);
+    setCounter((prev) => prev + delta);
   };
 
   useEffect(() => {
@@ -21,4 +21,4 @@ function FetchData() {
   );
 }
 
-export default FetchData;
+export default Counter;
