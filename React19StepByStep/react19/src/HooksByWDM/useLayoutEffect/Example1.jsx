@@ -15,7 +15,7 @@ function Example1() {
   }, []);
   // conclusion
   // do not use it unnecessary 
-  // 
+  // so we use this useLayoutEffect that we don't need to show in UI but use it 
   return (
     <>
       <div style={{ backgroundColor: color, padding: "11px" }}>
