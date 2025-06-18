@@ -1,8 +1,9 @@
-let x3 = [1, 2, 3, 4, 5];
-let y3 = [6, 7, 8, 9, 10];
+const restFn01 = () => {
+  return "NO PARAMETER";
+};
+console.log(restFn01(2, 4, 4, 5)); // NO PARAMETER
 
-let x3y3 = [100, ...x3, ...y3]; //  [100, 1, 2, 3, 4,5, 6, 7, 8, 9,10]
-console.log(x3y3);
-
-console.log("x3:", x3); // x3: [ 1, 2, 3, 4, 5 ]
-console.log("y3:", y3); // y3: [ 6, 7, 8, 9, 10 ]
+const restFn02 = (...arg) => {
+  return arg;
+};
+console.log(restFn02(2, 4, 4, 5)); // [ 2, 4, 4, 5 ]

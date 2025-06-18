@@ -15,3 +15,5 @@ let y2 = [6, 7, 8, 9, 10];
 console.log([...x2, ...y2]); // [  1, 2, 3, 4,  5,  6, 7, 8, 9, 10]
 console.log("x2:", x2); // x2: [ 1, 2, 3, 4, 5 ]
 console.log("y2:", y2); // y2: [ 6, 7, 8, 9, 10 ]
+
+/* REST OPERATORS */
