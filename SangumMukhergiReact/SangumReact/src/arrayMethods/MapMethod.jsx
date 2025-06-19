@@ -7,6 +7,8 @@ function MapMethod() {
   const filterArr = data.filter((item) => item.city === "Islamabad");
   const findCity = data.find((item) => item.city === "Islamabad");
 
+  const exampleOfSome = data.some((item) => item.sal > 5000);
+
   return (
     <>
       <h3>ARRAY METHODS</h3>
@@ -36,6 +38,14 @@ function MapMethod() {
           {findCity.nm} - {findCity.sal}
         </div>
       </div>
+      <h3>Some - gives true and false</h3>
+      <div>Is there any salary greater than 5000?</div>
+      {exampleOfSome
+        ? `yes salaries are greater than 5000`
+        : "No"}
+
+        <h3>include</h3>
+      
     </>
   );
 }
