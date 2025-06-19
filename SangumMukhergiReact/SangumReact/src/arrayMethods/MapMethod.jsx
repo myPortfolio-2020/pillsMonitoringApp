@@ -4,10 +4,9 @@ import { personsArray } from "./personsArray";
 function MapMethod() {
   const [data, setdata] = useState(personsArray);
 
-  const filterArr = data.filter((item) => item.city === "Karachi");
+  const filterArr = data.filter((item) => item.city === "Islamabad");
   const findCity = data.find((item) => item.city === "Islamabad");
-  console.log("filterArr", filterArr);
-  console.log("findCity", findCity);
+
   return (
     <>
       <h3>ARRAY METHODS</h3>
@@ -21,7 +20,7 @@ function MapMethod() {
           </div>
         );
       })}
-      <h3>Filter</h3>
+      <h3>Filter for Islamabad City</h3>
       {filterArr.map((item, index) => {
         return (
           <div key={index} className="flex">
@@ -30,10 +29,13 @@ function MapMethod() {
           </div>
         );
       })}
-      <h3>Find</h3>
-      {findCity.map((item, index) => (
-        <div key={index}>{item}</div>
-      ))}
+      <h3>Find - first record</h3>
+      <div>
+        <div>First Records for Islamabad</div>
+        <div>
+          {findCity.nm} - {findCity.sal}
+        </div>
+      </div>
     </>
   );
 }
