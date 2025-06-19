@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import One from "./One";
 
 const building = [
   {
@@ -21,17 +22,14 @@ const building = [
 function Condition() {
   const [condition, setCondition] = useState(building);
 
-  const beds = condition.map((item) => item.bed);
-console.log(beds)
-  const checkHouses = () => {
-    console.log("house selection");
-  };
-  console.log(condition);
+  const checkHouses = () => {};
+
   return (
     <>
       <div>
         <h2>Check Conditions</h2>
         <div>which size you want to have?</div>
+
         <div>
           <button onClick={() => checkHouses()}>One</button>
           <button onClick={() => checkHouses()}>Two</button>
