@@ -22,7 +22,14 @@ const building = [
 function Condition() {
   const [condition, setCondition] = useState(building);
 
-  const checkHouses = () => {};
+  const beds = condition.map((bed) => {
+    return bed.bed
+  })
+
+  const checkHouses = () => {
+    
+    
+  };
 
   return (
     <>
