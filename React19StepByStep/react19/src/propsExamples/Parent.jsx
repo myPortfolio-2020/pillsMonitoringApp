@@ -3,6 +3,7 @@ import PropsEx1 from "./PropsEx1";
 import ObjectProp from "./ObjectProp";
 import ArrayProp from "./ArrayProp";
 import ChildToParaent from "./ChildToParaent";
+import ChildrenWrapper from "./ChildrenWrapper";
 
 function Parent() {
   const [propOne, setPropOne] = useState(5);
@@ -28,6 +29,14 @@ function Parent() {
       <hr />
       <div>Parent: {val} </div>
       <ChildToParaent clickHnaderOnParent={clickHnaderOnParent} />
+      <hr />
+      <ChildrenWrapper>
+        <div
+          style={{ color: "green", border: "5px solid green", padding: "11px" }}
+        >
+          <div>ChildrenWrapper</div>
+        </div>
+      </ChildrenWrapper>
     </>
   );
 }

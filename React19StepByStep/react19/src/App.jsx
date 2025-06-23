@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div>Hi, world!!!</div>
-      <CondiPreferences />
+      <Parent />
     </>
   );
 }
