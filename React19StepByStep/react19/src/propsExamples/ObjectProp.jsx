@@ -1,10 +1,10 @@
 import React from "react";
 
-function ObjectProp({ objectProp }) {
+function ObjectProp({ objProp }) {
   return (
     <>
       <div>
-        ObjectProp - {objectProp.nm} - {objectProp.sal}
+        ObjectProp - {objProp.nm} - {objProp.sal}
       </div>
     </>
   );

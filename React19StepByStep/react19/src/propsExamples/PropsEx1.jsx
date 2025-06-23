@@ -3,10 +3,8 @@ import React from "react";
 function PropsEx1(props) {
   return (
     <>
-      <div>PropsEx1</div>
-      <div>
-        this is {props.propVal} - {props.age}
-      </div>
+      <div>PropsEx1 - {props.propOne}</div>
+      <button>hit from Child</button>
     </>
   );
 }
