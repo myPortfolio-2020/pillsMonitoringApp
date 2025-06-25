@@ -1,12 +1,11 @@
 import "./App.css";
-import Parent from "./propsExamples/Parent";
-import CondiPreferences from "./whichConditions/CondiPreferences";
+import RadioButton from "./inputs/RadioButton";
 
 function App() {
   return (
     <>
       <div>Hi, world!!!</div>
-      <Parent />
+      <RadioButton />
     </>
   );
 }

@@ -1,0 +1,18 @@
+const obj1 = {
+  nm: "qwq",
+  sal: 5000,
+};
+const obj2 = {
+  dept: "qwq",
+  location: "street1",
+};
+const sumObj1 = Object.assign({}, obj1, obj2);
+const sumObj2 = { ...obj1, ...obj2 };
+
+console.log(sumObj1);
+console.log(sumObj2);
+console.log(obj1);
+console.log(obj2);
+
+if we don not add empty array with objectassign {}
+it will mutates obj1 means merge all in obj1

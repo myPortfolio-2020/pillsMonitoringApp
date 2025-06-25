@@ -30,11 +30,14 @@ function Parent() {
       <div>Parent: {val} </div>
       <ChildToParaent clickHnaderOnParent={clickHnaderOnParent} />
       <hr />
-      <ChildrenWrapper>
-        <div
-          style={{ color: "green", border: "5px solid green", padding: "11px" }}
-        >
-          <div>ChildrenWrapper</div>
+      <ChildrenWrapper color="orange">
+        <div>
+          <div>ChildrenWrapper - for Anil</div>
+        </div>
+      </ChildrenWrapper>
+      <ChildrenWrapper color="blue">
+        <div>
+          <div>ChildrenWrapper - for John</div>
         </div>
       </ChildrenWrapper>
     </>

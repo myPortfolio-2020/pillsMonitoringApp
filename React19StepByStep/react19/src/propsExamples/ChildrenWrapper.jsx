@@ -1,9 +1,11 @@
 import React from "react";
 
-function ChildrenWrapper({ children }) {
+function ChildrenWrapper({ children, color }) {
   return (
     <>
-      <div>{children}</div>
+      <div style={{ color: color, border: "1px solid #ddd", padding: "11px" }}>
+        {children}
+      </div>
     </>
   );
 }
