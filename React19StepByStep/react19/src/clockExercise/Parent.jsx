@@ -4,7 +4,6 @@ import Clock from "./Clock";
 function Parent() {
   const [color, setColor] = useState("yellow");
   const colorHandler = (e) => {
-    console.log(e.target.value);
     setColor(e.target.value);
   };
   return (
