@@ -1,11 +1,11 @@
 import "./App.css";
-import RadioButton from "./inputs/RadioButton";
+import Parent from "./clockExercise/Parent";
 
 function App() {
   return (
     <>
       <div>Hi, world!!!</div>
-      <RadioButton />
+      <Parent />
     </>
   );
 }
