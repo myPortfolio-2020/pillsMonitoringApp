@@ -10,15 +10,9 @@ function Parent() {
   return (
     <>
       <select onChange={colorHandler}>
-        <option name="yellow" value="yellow">
-          Yellow
-        </option>
-        <option name="red" value="red">
-          red
-        </option>
-        <option name="green" value="green">
-          green
-        </option>
+        <option value="yellow">Yellow</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
       </select>
 
       <Clock color={color} />

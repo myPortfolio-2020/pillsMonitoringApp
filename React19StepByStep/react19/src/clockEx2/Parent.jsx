@@ -1,10 +1,13 @@
 import React from "react";
+import Clock2 from "./Clock2";
+
+
 
 function Parent() {
   return (
     <>
-      <div>Colock Color Change accordingly</div>
-      <Clock />
+      <div>Clock Color Change accordingly</div>
+      <Clock2 />
     </>
   );
 }
