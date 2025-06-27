@@ -39,6 +39,20 @@
   line-height: 11px;
   align-items: center;
 }
+.flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.flexBox {
+  background-color: #fde5e5;
+  padding: 2px 11px;
+  border: 1px solid #f7c2c2;
+  margin: 4px;
+  width: auto;
+  font-size: 13px;
+  text-align: left;
+}
 .boxOuter {
   display: flex;
   align-items: center;
@@ -68,6 +82,9 @@
   padding: 11px;
   margin: 7px;
   border-radius: 5px;
+}
+.bold {
+  font-weight: bold;
 }
 @keyframes logo-spin {
   from {
