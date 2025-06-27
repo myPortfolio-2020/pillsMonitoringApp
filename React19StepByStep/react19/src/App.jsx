@@ -1,11 +1,11 @@
 import "./App.css";
-import NestedLoop from "./nestedLooping/NestedLoop";
+import UseEffHook1 from "./useEffectHook/UseEffHook1";
 
 function App() {
   return (
     <>
       <div>Hi, world!!!</div>
-      <NestedLoop />
+      <UseEffHook1 />
     </>
   );
 }
