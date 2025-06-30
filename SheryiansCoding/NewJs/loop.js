@@ -20,7 +20,7 @@ for (let i = 0; i < 5; i++) {
   }
   console.log("i should not equal to 1:", i);
 }
-
+// continue means skip this condition and go to the next
 // NOTICE IT WILL NOT PRINT THE VALUE AT WHEN i === 1
 // i should not equal to 1: 0
 // i should not equal to 1: 2
