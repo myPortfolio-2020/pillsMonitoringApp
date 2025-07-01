@@ -1,10 +1,10 @@
 // IIFE
 // Immediate Invoked Function execution
-
+// dont forget ; semicolon in the end
 
 (function(){
     console.log('IIFE')
-})()
+})();
 
 (function() {
     var name = 'ChatGPT';
