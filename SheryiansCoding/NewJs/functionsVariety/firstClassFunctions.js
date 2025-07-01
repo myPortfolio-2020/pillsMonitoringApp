@@ -5,11 +5,11 @@
 
 // --------------------------------------------------------------
 
-const fCF3 = (example3) => {
+const fCF = (example3) => {
   return example3;
 };
 
-const returnFCF = fCF3(() => {
+const returnFCF = fCF(() => {
   return "h1";
 });
 
