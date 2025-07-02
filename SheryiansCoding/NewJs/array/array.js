@@ -31,3 +31,8 @@ let eleUnshift = unShiftEle.unshift("a+", "b+");
 
 console.log(unShiftEle); // ["a+",'b+',"a","b","c","d","e"]
 console.log(eleUnshift); // 6
+
+
+// difference between slice and splice
+
+//slice return you a new array
