@@ -6,3 +6,10 @@ let spliced = spliceMe.splice(2, 4);
 
 console.log(spliceMe); // [ 1, 2, 7, 8, 9 ]
 console.log(spliced); // [ 3, 4, 5, 6 ]
+
+
+//Exercise 1: Remove an Element
+//Remove 'blue' from the array using splice().
+
+let colors = ['red', 'green', 'blue', 'yellow'];
+
