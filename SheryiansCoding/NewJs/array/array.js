@@ -31,11 +31,3 @@ let eleUnshift = unShiftEle.unshift("a+", "b+");
 
 console.log(unShiftEle); // ["a+",'b+',"a","b","c","d","e"]
 console.log(eleUnshift); // 6
-
-
-// Splice
-let spliceMe = [1,2,3,4,5,6,7,8,9]
-let spliced = spliceMe.splice(2,4)
-
-console.log(spliceMe) //
-console.log(spliced) //
