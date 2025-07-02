@@ -32,7 +32,31 @@ let eleUnshift = unShiftEle.unshift("a+", "b+");
 console.log(unShiftEle); // ["a+",'b+',"a","b","c","d","e"]
 console.log(eleUnshift); // 6
 
-
 // difference between slice and splice
 
-//slice return you a new array
+// slice return you a new array, does not modify - usage - Copy a portion
+// splice modify exisitng array - usage - Add/remove/replace elements
+
+//slice
+let num = [1, 2, 3, 4, 5, 6, 7, 8];
+let numSlice = num.slice(2, 4);
+console.log(num); // no modification in real array
+console.log(numSlice); // [ 3, 4 ]
+
+//Reverse Method
+let reverse = [1, 2, 3, 4, 5];
+reverse.reverse();
+console.log(reverse); //[ 5, 4, 3, 2, 1 ]
+
+//sort
+let sortMethodAssending = [11, 221, 32, 4, 5];
+sortMethodAssending.sort((a, b) => {
+  return a - b;
+});
+console.log(sortMethodAssending); // [ 4, 5, 11, 32, 221 ]
+
+let sortMethodDecending = [11, 221, 32, 4, 5];
+sortMethodDecending.sort((a, b) => {
+  return b - a;
+});
+console.log(sortMethodDecending); //[ 221, 32, 11, 5, 4 ]

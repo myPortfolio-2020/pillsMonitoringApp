@@ -53,7 +53,12 @@ let itemSplice = items.splice(0,3);
 console.log(items); // []
 console.log(itemSplice); // [ 'x', 'y', 'z' ]
 
+
+
 // ex6: Remove 2 elements starting from index 2.
 
-
 let fruitBasket = ["apple", "banana", "cherry", "date", "fig", "grape"];
+let fruitBasketSplice = fruitBasket.splice(2,2)
+
+console.log(fruitBasket) // ["apple", "banana", "fig", "grape"];
+console.log(fruitBasketSplice) // ["cherry", "date",]
