@@ -86,6 +86,7 @@ gsap.from("#page3 #pgBox", {
   rotate: 360,
   stagger: 0.6,
   scale: 0.2,
+  rotate: 2,
   //   scrollTrigger: "#page2 #pgBox",
   scrollTrigger: {
     trigger: "#page3 #pgBox",
