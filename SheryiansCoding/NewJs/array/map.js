@@ -1,11 +1,3 @@
-// foreach
-
-let forEach01 = [12, 33, 44, 65, 67];
-
-forEach01.forEach((val) => {
-  console.log(val);
-});
-
 //map
 // when to use - when you need to create a new map
 // map means - create an empty array in your mind as soon as you write any.map()
@@ -28,9 +20,8 @@ const newArr02 = mapArray02.map((val) => {
 
 console.log("no return", newArr02); // no return [ undefined, 122, 333, undefined, undefined ]
 
+const newArr3 = mapArray02.map((num) => {
+  return num;
+});
 
-const newArr3 = mapArray02.map((num)=>{
-  return num
-})
-
-console.log(newArr3) // [ 12, 122, 333, 24, 55 ]
+console.log(newArr3); // [ 12, 122, 333, 24, 55 ]
